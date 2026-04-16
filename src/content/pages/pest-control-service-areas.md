@@ -1,7 +1,20 @@
 ---
 title: "Local Pest Control | Kansas City, MO | KC Pest Experts"
-description: "Pest Control Service Areas in the  Kansas City Metro Area Olathe, KS Overland Park, KS Lenexa, KS Shawnee, KS Mission, KS Leawood, KS Prairie Village, KS G"
-order: 999
+description: "KC Pest Experts serves homes and businesses throughout the Kansas City metro area in Kansas and Missouri."
+order: 30
 ---
 
-Pest Control Service Areas in the  Kansas City Metro Area Olathe, KS Overland Park, KS Lenexa, KS Shawnee, KS Mission, KS Leawood, KS Prairie Village, KS Gardner,
+KC Pest Experts serves customers across the Kansas City metro area, including:
+
+- Olathe
+- Overland Park
+- Lenexa
+- Shawnee
+- Mission
+- Leawood
+- Prairie Village
+- Gardner
+- Lee's Summit
+- Independence
+
+If your city is nearby and not listed, contact us and we will confirm service availability.

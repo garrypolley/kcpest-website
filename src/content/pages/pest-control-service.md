@@ -1,7 +1,8 @@
 ---
 title: "Pest Control Estimate | Kansas City, MO | KC Pest Experts"
 description: "Request pest control service in the Kansas City metro area. Share your issue and KC Pest Experts will follow up quickly."
-order: 999
+navLabel: "Request Service"
+order: 50
 ---
 
 Contact KC Pest Experts today for fast scheduling and straightforward service recommendations.

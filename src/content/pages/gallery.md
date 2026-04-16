@@ -1,7 +1,7 @@
 ---
 title: "View Our Gallery | Kansas City, MO | KC Pest Experts"
 description: "Browse photos and videos from KC Pest Experts service work across the Kansas City metro area."
-order: 999
+order: 60
 ---
 
 View photos and videos from KC Pest Experts service work across the Kansas City metro area.

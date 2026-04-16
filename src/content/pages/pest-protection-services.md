@@ -1,7 +1,8 @@
 ---
 title: "Home Pest Protection Programs | Kansas City, MO | KC Pest Experts"
 description: "Protect your home with KC Pest Experts home protection plans in the Kansas City metro area. Call (913) 600-5247 for a personalized treatment program."
-order: 999
+navLabel: "Protection Plans"
+order: 40
 ---
 
 Home Pest Protection Programs in the Kansas City Metro Area
