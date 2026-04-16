@@ -21,6 +21,8 @@ const posts = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
     author: z.string().default("KC Pest Experts"),
+    coverImage: z.string().optional(),
+    coverAlt: z.string().optional(),
   }),
 });
 

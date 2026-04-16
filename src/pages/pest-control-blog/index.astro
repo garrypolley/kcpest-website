@@ -5,6 +5,13 @@ import Layout from "../../layouts/Layout.astro";
 const posts = (await getCollection("posts")).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
+const formatPubDate = (date: Date) =>
+  new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(date);
 ---
 
 <Layout
@@ -21,7 +28,19 @@ const posts = (await getCollection("posts")).sort(
       {
         posts.map((post) => (
           <a href={`/${post.id}`} class="block rounded-2xl border border-brand-blue/10 bg-white p-5 transition hover:shadow-md">
-            <p class="text-sm font-semibold uppercase tracking-wide text-brand-blue">{post.data.pubDate.toDateString()}</p>
+            {
+              post.data.coverImage && (
+                <div class="mb-4 overflow-hidden rounded-xl border border-brand-blue/10 bg-slate-100">
+                  <img
+                    src={post.data.coverImage}
+                    alt={post.data.coverAlt ?? `${post.data.title} preview`}
+                    class="h-40 w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              )
+            }
+            <p class="text-sm font-semibold uppercase tracking-wide text-brand-blue">{formatPubDate(post.data.pubDate)}</p>
             <h2 class="mt-1 text-xl font-bold">{post.data.title}</h2>
             <p class="mt-2 text-sm text-slate-600">{post.data.description}</p>
           </a>

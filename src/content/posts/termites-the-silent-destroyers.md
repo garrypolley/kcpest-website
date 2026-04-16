@@ -1,10 +1,10 @@
 ---
 title: "Termites, the silent Destroyers"
-description: "Termites, the silent Destroyers March 14, 2024 A better word to describe a termite is Ninja. They work in the dark 24/7, they attempt staying out of sight,"
-pubDate: 2026-04-16
+description: "Based in Kansas City, MO, KC Pest Experts provides expert pest control services for your home or business. Call (913) 600-5247 today to learn more!"
+pubDate: 2024-03-14
 author: "KC Pest Experts"
+coverImage: "/images/blog/termites-the-silent-destroyers.jpg"
+coverAlt: "Termites, the silent Destroyers"
 ---
 
-This entry was imported from the existing site crawl and should be manually polished.
-
-Termites, the silent Destroyers March 14, 2024 A better word to describe a termite is Ninja. They work in the dark 24/7, they attempt staying out of sight, they’re extremely destructive and
+A better word to describe a termite is Ninja. They work in the dark 24/7, they attempt staying out of sight, they’re extremely destructive and it takes a well trained warrior to defeat them. Using Ninja analogies brings out my inner child and now I most definitely am watching The 3 Ninjas this evening. Eastern Subterranean termites are the type of termite we have to deal with in Kansas City. In different parts of the country there are multiple kinds of termites, in fact over 2000 kinds of termites around the world. Eastern Subterranean termites colonize in the soil. The worker termites go back and forth between the food source and the colony 24/7 365 days a year, never hibernating. When you have a destructive insect whose job is to constantly seek cellulose material, you must make sure your home is not at risk. Termites are virtually everywhere in the soil where there are roots, they feed on tree roots and plant roots, but while they keep expanding their colony and continue foraging forward, if your home is encountered, a small gap not much larger than a human hair is all a termite needs to continue their search for wood inside your home. When selling / purchasing a home, termite inspections are an incredibly smart thing to have done. We hear from clients, “I’ve never seen a termite and I’ve lived here 30 years.” However, oftentimes termites are doing their damage in the shadows in places you would never think to inspect or notice. We have witnessed termite issues in old home and termite issues in brand new homes. Many variables are involved when performing an inspection. There are preventative measures you can take to make sure these destructive little insects do not cause damage to one of your greatest investments. Speak to a professional about your options and create a barrier of protection to stop them before they go full on Ninja destruction in the shadows. Don’t hesitate to call us here at KC Pest Experts, as we do not charge to provide you a free inspection and consultation!

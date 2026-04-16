@@ -1,10 +1,10 @@
 ---
 title: "The Plague of the Buffalo Gnat"
-description: "The Plague of the Buffalo Gnat March 14, 2024 Summer is right around the corner. Spring is here, but will be leaving us with a plethora of pest issues in t"
-pubDate: 2026-04-16
+description: "Based in Kansas City, MO, KC Pest Experts provides expert pest control services for your home or business. Call (913) 600-5247 today to learn more!"
+pubDate: 2024-03-14
 author: "KC Pest Experts"
+coverImage: "/images/blog/the-plague-of-the-buffalo-gnat.jpg"
+coverAlt: "The Plague of the Buffalo Gnat"
 ---
 
-This entry was imported from the existing site crawl and should be manually polished.
-
-The Plague of the Buffalo Gnat March 14, 2024 Summer is right around the corner. Spring is here, but will be leaving us with a plethora of pest issues in the greater Kansas City area. If you
+Summer is right around the corner. Spring is here, but will be leaving us with a plethora of pest issues in the greater Kansas City area. If you spend any amount of time outdoors, you are sure to have been swarmed by the annoying Buffalo Gnat. These parasites have appeared to be exceptionally worse and active in recent years. Probably like many other professional pest control companies, our phones have been extremely active with customers seeking solutions to the horrific gnat swarms in recent years. Buffalo Gnats are a very interesting little creature that are most active between the months of May and July. Interestingly, the female gnats get their food from the blood of their host. Usually this host is a bird, a cow or various other animals. Sometimes, unfortunately, that host is a human. Like many in the Kansas City region, you have been bit by these aggressive pests. It is not likely that a Gnat could transmit a disease to a human, but they have been known to cause issues to cows and other animals. Male Gnats get their food source from Nectar, so if you have been bit recently, you can blame it on the females. The biggest reason gnat issues can be overwhelming in your yard and surrounding areas is due to the rate at which females reproduce. Female gnats are known to lay between 300 – 500 eggs in one cycle. Speak to a professional for options to treat your yard and prevent these creatures from bothering you. However, if that is not an option, try using insect repellants. There are many brands on the market now that are all natural and essential oil based. The natural products in our experience work well, but need reapplied more often than regular insect repellant. Call us here at KC Pest Experts for your free consultation and quote to keep your home and yard pest free this year!
