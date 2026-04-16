@@ -41,11 +41,31 @@ const cleanTitle = (title: string) =>
     .replace(/\s*\|\s*Kansas City,\s*MO\s*\|\s*KC Pest Experts\s*$/i, "")
     .replace(/\s*\|\s*KC Pest Experts\s*$/i, "")
     .trim();
+const defaultPageOgImage = "/images/social/home-social-preview.png";
+const defaultServiceOgImage = "/images/services/general-pest.jpg";
+const pageOgImage =
+  entryType === "page"
+    ? isServiceDetailPage
+      ? entry.data.previewImage ?? defaultServiceOgImage
+      : isProtectionPage
+        ? "/images/protection-plan-graphic.png"
+        : defaultPageOgImage
+    : defaultServiceOgImage;
+const pageOgImageAlt =
+  entryType === "page"
+    ? entry.data.previewAlt ?? `${cleanTitle(entry.data.title)} service preview`
+    : `${entry.data.title} article preview`;
 ---
 
 {
   entryType === "page" ? (
-    <Layout title={cleanTitle(entry.data.title)} description={entry.data.description}>
+    <Layout
+      title={cleanTitle(entry.data.title)}
+      description={entry.data.description}
+      ogImage={pageOgImage}
+      ogImageAlt={pageOgImageAlt}
+      ogType="website"
+    >
       <Hero title={cleanTitle(entry.data.title)} subtitle={entry.data.description} />
       <article class="article-content mx-auto max-w-3xl px-4 py-12 md:px-0">
         {
@@ -82,6 +102,9 @@ const cleanTitle = (title: string) =>
       title={`${entry.data.title} | KC Pest Experts`}
       description={entry.data.description}
       canonicalPath={`/${entry.id}`}
+      ogImage={pageOgImage}
+      ogImageAlt={pageOgImageAlt}
+      ogType="article"
     >
       <article class="article-content mx-auto max-w-3xl px-4 py-14 md:px-0">
         <p class="text-sm font-semibold uppercase tracking-wide text-brand-blue">{entry.data.pubDate.toDateString()}</p>

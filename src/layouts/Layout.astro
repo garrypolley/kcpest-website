@@ -6,6 +6,8 @@ interface Props {
   description?: string;
   canonicalPath?: string;
   ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: "website" | "article";
   noindex?: boolean;
 }
 
@@ -13,7 +15,9 @@ const {
   title = "Pest Control | Kansas City, MO | KC Pest Experts",
   description = "Based in Kansas City, MO, KC Pest Experts provides expert pest control services for your home or business. Call (913) 600-5247 today to learn more!",
   canonicalPath,
-  ogImage = "/images/logo.webp",
+  ogImage = "/images/social/home-social-preview.png",
+  ogImageAlt = "KC Pest Experts trusted pest and wildlife control in Kansas City",
+  ogType = "website",
   noindex = false,
 } = Astro.props;
 
@@ -52,15 +56,18 @@ const localBusinessSchema = {
     <meta name="robots" content={robots} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.ico" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="KC Pest Experts" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageUrl} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
   </head>
   <body class="bg-brand-cream text-slate-800">
