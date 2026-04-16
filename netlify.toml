@@ -5,3 +5,57 @@
 [build.environment]
   NODE_VERSION = "22"
   PUBLIC_SITE_URL = "https://kcpest-website.garrypolley.com"
+
+[[redirects]]
+  from = "/local-pest-control-experts"
+  to = "/pest-and-wildlife-services/local-pest-control-experts"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bed-bug-service"
+  to = "/pest-and-wildlife-services/bed-bug-service"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/termite-control-service"
+  to = "/pest-and-wildlife-services/termite-control-service"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pre-construction-termite-treatments"
+  to = "/pest-and-wildlife-services/pre-construction-termite-treatments"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rodent-pest-control-service"
+  to = "/pest-and-wildlife-services/rodent-pest-control-service"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mosquitos-ticks-pest-control"
+  to = "/pest-and-wildlife-services/mosquitos-ticks-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/spider-pest-control-service"
+  to = "/pest-and-wildlife-services/spider-pest-control-service"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/carpenter-ants-pest-control"
+  to = "/pest-and-wildlife-services/carpenter-ants-pest-control"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pest-control-blog/carpenter-ants-pest-control"
+  to = "/pest-and-wildlife-services/carpenter-ants-pest-control"
+  status = 301
+  force = true

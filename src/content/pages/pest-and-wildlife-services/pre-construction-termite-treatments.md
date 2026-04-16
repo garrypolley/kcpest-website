@@ -1,23 +1,21 @@
 ---
 title: "Pre-Construction Termite Treatments | Kansas City, MO | KC Pest Experts"
-description: "Pre-construction termite treatment services to help protect new Kansas City builds before slab and framing phases."
+description: "Pre-construction termite treatment options for Kansas City builds, including soil treatment and Bora-Care wood applications."
+previewImage: "/images/services/preconstruction-termite.jpg"
+previewAlt: "Pre-construction termite treatment preview"
 navLabel: "Pre-Construction Termite"
 isService: true
 order: 40
 ---
 
-Pre-construction termite treatment helps protect a property before pests gain access to structural wood. It is one of the most effective times to establish long-term termite protection.
+Pre-construction termite treatment is one of the most effective ways to prevent future termite problems. In the Kansas City region, eastern subterranean termites are a persistent risk, and proactive treatment during construction can provide long-term protection.
 
-## Ideal for
+## Soil treatment before slab pour
 
-- New home construction
-- Additions and major structural renovations
-- Builders who want proactive risk reduction before completion
+One option is treating soil before or during concrete placement. This places the termiticide barrier under the slab and helps protect the structure for years.
 
-## Service focus
+## Bora-Care framing treatment
 
-- Site treatment coordination with build phase timing
-- Product and application plans matched to project scope
-- Documentation for treatment completion
+Another option is applying Bora-Care to framing lumber during the build process. This treatment provides long-term wood protection and is commonly used as part of pre-construction termite planning.
 
-Reach out early in the construction timeline so treatment can be scheduled at the right stage.
+For builders and homeowners planning new construction, contact us early so treatment can be scheduled at the correct phase.

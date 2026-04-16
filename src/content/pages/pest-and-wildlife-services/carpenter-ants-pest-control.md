@@ -1,23 +1,23 @@
 ---
 title: "Carpenter Ant Control | Kansas City, MO | KC Pest Experts"
-description: "Carpenter ant control services in Kansas City with inspection, treatment, and recommendations to reduce wood-damaging activity."
+description: "Carpenter ant control services in the Kansas City metro area with inspection, source identification, and targeted treatment."
+previewImage: "/images/services/carpenter-ant.jpg"
+previewAlt: "Carpenter ant control service preview"
 navLabel: "Carpenter Ant Control"
 isService: true
 order: 80
 ---
 
-Carpenter ants can tunnel through damp or softened wood and create ongoing structural concerns if colonies are left active. Early intervention helps limit damage and recurring activity.
+Carpenter ants are a serious structural pest in the Kansas City area. They are drawn to moisture-damaged wood and can create extensive internal galleries over time if activity is not treated.
 
-## Signs of carpenter ants
+## Why carpenter ants are a concern
 
-- Large black or red ants indoors
-- Rustling sounds inside walls or wood trim
-- Sawdust-like frass near baseboards or window frames
+Carpenter ants can damage framing, wall voids, and trim and may become as destructive as other wood-damaging pests when colonies expand.
 
-## Service plan
+## Service focus
 
-- Identify likely colony and satellite activity zones
-- Apply targeted treatment where ants are nesting and trailing
-- Recommend moisture and exclusion improvements to reduce return risk
+- Inspect and identify active foraging and nesting zones
+- Determine likely moisture and entry contributors
+- Apply targeted treatment, including wall void applications when needed
 
-If you suspect carpenter ants, request service before the colony expands.
+If you see large black ants indoors or around damp wood, request service quickly.

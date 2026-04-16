@@ -6,7 +6,19 @@ import ServiceGrid from "../components/ServiceGrid.astro";
 import Layout from "../layouts/Layout.astro";
 
 const home = await getEntry("pages", "home");
-const services = (await getCollection("pages", ({ data }) => data.isService))
+const serviceLabels = new Set([
+  "General Pest Control",
+  "Bed Bug Extermination",
+  "Termite Control",
+  "Pre-Construction Termite",
+  "Rodent Control",
+  "Mosquito & Tick Control",
+  "Spider Control",
+  "Carpenter Ant Control",
+  "Wildlife Control Services",
+]);
+const services = (await getCollection("pages"))
+  .filter((page) => page.data.navLabel && serviceLabels.has(page.data.navLabel))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 

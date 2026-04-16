@@ -1,23 +1,27 @@
 ---
 title: "Spider Pest Control | Kansas City, MO | KC Pest Experts"
-description: "Spider control services in Kansas City to reduce indoor and exterior spider activity through targeted treatment and prevention."
+description: "Spider control services in the Kansas City metro area, including treatment for common house spiders, brown recluses, wolf spiders, and black widows."
+previewImage: "/images/services/spider.jpg"
+previewAlt: "Spider control service preview"
 navLabel: "Spider Control"
 isService: true
 order: 70
 ---
 
-Spider activity often increases when other insects are present and shelter points are easy to access. Our service focuses on reducing current spider pressure and limiting future harborage.
+Spider activity in homes often signals both harborage and available prey insects. KC Pest Experts provides spider control services for Kansas City homes and businesses with treatment plans tailored to the type and level of activity.
 
-## What we address
+## Spider types we commonly treat
 
-- Interior and exterior spider activity
-- Web build-up around entry points and eaves
-- Conditions attracting prey insects and recurring spider traffic
+- Brown recluse spiders
+- Wolf spiders
+- Black widows
+- Common house spiders
 
-## A practical approach
+## Signs of a spider infestation
 
-- Inspect high-activity zones
-- Apply targeted treatment where it matters most
-- Recommend prevention steps for long-term control
+- Webs in multiple rooms or corners
+- Frequent live sightings indoors
+- Egg sacs around baseboards, garages, or storage areas
+- Repeated sightings in low-traffic spaces
 
-If spider sightings are becoming frequent indoors, schedule a service evaluation.
+If spider sightings are increasing, schedule an inspection and treatment plan.

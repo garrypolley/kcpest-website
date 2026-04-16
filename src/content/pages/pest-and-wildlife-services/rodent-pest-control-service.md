@@ -1,21 +1,27 @@
 ---
 title: "Rodent Pest Control | Kansas City, MO | KC Pest Experts"
-description: "Rodent control services for mice and rats in the Kansas City metro area, including removal strategy and prevention guidance."
+description: "Rodent pest control services for mice and rats in the Kansas City metro area, with inspection, treatment, and prevention planning."
+previewImage: "/images/services/rodent.webp"
+previewAlt: "Rodent control service preview"
 navLabel: "Rodent Control"
 isService: true
 order: 50
 ---
 
-Rodent activity can lead to contamination, property damage, and repeated re-entry if openings are not addressed. We provide practical rodent control plans tailored to each property.
+Rodent problems are common in the Kansas City region and can cause contamination, structural damage, and recurring entry issues. KC Pest Experts provides rodent control services for mice, rats, and similar nuisance activity.
 
-## Rodent service may include
+## Why professional rodent control matters
 
-- Inspection of entry points and nesting areas
-- Targeted control strategy for active populations
-- Follow-up recommendations for exclusion and sanitation
+Over-the-counter approaches often miss root causes and can make problems worse. Our team focuses on accurate inspection, targeted control, and prevention recommendations so results last.
 
 ## Health and safety context
 
 According to CDC guidance, rodent urine and droppings can spread illnesses including leptospirosis, salmonellosis, and tularemia risk pathways in certain conditions. Fast cleanup and professional control reduce that exposure risk.
 
-If you hear scratching, find droppings, or notice gnaw marks, request service promptly.
+## Signs to watch for
+
+- Droppings in cabinets, attics, or utility areas
+- Scratching sounds in walls or ceilings
+- Gnaw marks on wiring, wood, or stored items
+
+If you notice these signs, request service promptly.

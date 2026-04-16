@@ -26,3 +26,6 @@ pnpm-debug.log*
 # local migration artifacts
 data/raw-mirror/
 data/logs/
+
+# Local Netlify folder
+.netlify

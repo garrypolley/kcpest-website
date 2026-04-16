@@ -1,23 +1,21 @@
 ---
 title: "Mosquito and Tick Control | Kansas City, MO | KC Pest Experts"
-description: "Mosquito and tick treatment services for Kansas City yards to reduce biting pressure and improve outdoor comfort."
+description: "Mosquito and tick control services in the Kansas City metro area with treatment options for both natural and standard programs."
+previewImage: "/images/services/mosquito-tick.webp"
+previewAlt: "Mosquito and tick control service preview"
 navLabel: "Mosquito & Tick Control"
 isService: true
 order: 60
 ---
 
-Mosquitoes and ticks can make outdoor spaces hard to enjoy and increase health concerns for families and pets. We provide treatment plans focused on reducing active populations and recurring hotspots.
+Mosquitoes and ticks are both a nuisance and a health concern for many families. KC Pest Experts provides mosquito and tick control programs for Kansas City properties to reduce activity and improve outdoor comfort.
 
-## Service focus
+## Mosquito and tick control options
 
-- Yard and perimeter treatment targeting common breeding and resting zones
-- Seasonal treatment planning based on local activity patterns
-- Practical recommendations for standing water and habitat reduction
+We offer treatment options including natural-focused programs and standard synthetic treatment approaches. We will walk you through each option so you can choose what fits your property and comfort level.
 
-## When to call
+## Expected results
 
-- Frequent bites in your yard
-- Tick activity near landscaping, fences, or pet areas
-- Mosquito swarms around patios or entryways
+Regular service can significantly reduce mosquito pressure across active areas of your yard. While no program can guarantee zero insect activity, our goal is strong, noticeable reduction and consistent control.
 
-Request service before peak season for best prevention results.
+Request a quote before peak season for best results.

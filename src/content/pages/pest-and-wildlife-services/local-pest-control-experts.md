@@ -1,24 +1,27 @@
 ---
 title: "Pest Control Services | Kansas City, MO | KC Pest Experts"
-description: "General pest control for Kansas City homes and businesses, including treatment and ongoing prevention plans."
+description: "General pest control services in the Kansas City metro area for spiders, ants, cockroaches, mosquitos, beetles, termites, and rodents."
+previewImage: "/images/services/general-pest.jpg"
+previewAlt: "General pest control service preview"
 navLabel: "General Pest Control"
 isService: true
 order: 10
 ---
 
-General pest issues can escalate quickly when left untreated. KC Pest Experts provides targeted treatment plans for the most common insects and nuisance pests in the Kansas City metro.
+Pests are a year-round problem in Kansas City. KC Pest Experts provides general pest control for homes and businesses with treatment plans based on the specific pest pressure at your property.
 
-## Common problems we treat
+## General pests we help with
 
-- Ants and crawling insects
-- Roaches and pantry pests
-- Seasonal invaders
-- Recurring indoor and perimeter pest activity
+- Spiders
+- Ants
+- Cockroaches
+- Mosquitos
+- Beetles
+- Termites
+- Rodents
 
-## What to expect
+## Comprehensive pest solutions
 
-1. Inspection and problem identification
-2. Targeted treatment based on pest type and severity
-3. Prevention recommendations to reduce repeat activity
+We provide one-time services for urgent issues and ongoing programs for long-term prevention. For most properties, consistent service is the best way to reduce repeat infestations and protect your home over time.
 
-If you are seeing pest activity now, submit a service request and we will help you schedule quickly.
+If you are seeing active pest issues, submit a request and we will help you choose the right service plan.

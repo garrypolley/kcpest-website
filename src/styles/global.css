@@ -68,4 +68,8 @@
   .article-content ul {
     @apply mt-4 list-disc pl-5;
   }
+
+  .article-content a {
+    @apply font-semibold text-brand-blue underline decoration-brand-blue/60 underline-offset-2 transition hover:text-brand-blue-light hover:decoration-brand-blue-light;
+  }
 }

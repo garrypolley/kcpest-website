@@ -1,23 +1,27 @@
 ---
 title: "Bed Bug Treatments | Kansas City, MO | KC Pest Experts"
-description: "Professional bed bug treatment services in the Kansas City metro area with inspection, treatment, and follow-up planning."
+description: "Bed bug extermination services in the Kansas City metro area, including heat treatment options and follow-up support."
+previewImage: "/images/services/bed-bug.webp"
+previewAlt: "Bed bug treatment service preview"
 navLabel: "Bed Bug Extermination"
 isService: true
 order: 20
 ---
 
-Bed bugs are stressful and disruptive, especially when the problem reaches bedrooms and furniture. We focus on fast diagnosis and practical treatment planning so you can get back to normal.
+Bed bugs can spread quickly through bedrooms, furniture, and shared spaces. KC Pest Experts provides bed bug extermination services across the Kansas City metro area with treatment plans designed to eliminate active infestations and reduce reoccurrence.
 
-## Bed bug service includes
+## Bed bug heat treatment options
 
-- Inspection of common harborage areas
-- Clear treatment recommendations based on severity
-- Guidance for preparation and post-treatment expectations
+We offer bed bug heat treatment as part of our service options. Heat treatment is a chemical-free approach that can target both live bed bugs and eggs when applied correctly.
 
-## Signs you should call now
+## 90-day support commitment
 
-- Bite patterns after sleeping
-- Small blood spots on bedding
-- Live bugs, cast skins, or dark spotting near seams and creases
+Our goal is complete control and lasting peace of mind. If bed bug activity continues during the covered period, we return and adjust treatment as needed.
 
-Request service as soon as you notice signs to reduce spread and treatment complexity.
+## Common signs of bed bugs
+
+- Unexplained bites after sleeping
+- Dark spotting on mattresses or seams
+- Live bugs or shed skins near beds and furniture
+
+If you suspect bed bugs, request service quickly to limit spread and shorten treatment time.

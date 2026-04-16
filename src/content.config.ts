@@ -6,6 +6,8 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
+    previewImage: z.string().optional(),
+    previewAlt: z.string().optional(),
     navLabel: z.string().optional(),
     isService: z.boolean().default(false),
     order: z.number().default(999),
