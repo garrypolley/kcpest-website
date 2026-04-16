@@ -1,7 +1,9 @@
 ---
 title: "View Our Gallery | Kansas City, MO | KC Pest Experts"
-description: "GALLERY SHOP GALLERY View Our Photos and Videos Bed Bug- Kansas City, MO Button Wasps - Kansas City Button Mosquito Control \u2014 Kansas City, MO \u2014 KC Pest Exp"
+description: "Browse photos and videos from KC Pest Experts service work across the Kansas City metro area."
 order: 999
 ---
 
-GALLERY SHOP GALLERY View Our Photos and Videos Bed Bug- Kansas City, MO Button Wasps - Kansas City Button Mosquito Control — Kansas City, MO — KC Pest Experts Button Spiders - Kansas City, Kan
+View photos and videos from KC Pest Experts service work across the Kansas City metro area.
+
+This gallery section is being refreshed as we migrate the site. If you need examples of specific treatment types, call **(913) 600-5247** and we can share related service photos.

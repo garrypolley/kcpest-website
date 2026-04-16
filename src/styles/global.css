@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-blue: #213d81;
+  --color-brand-blue-light: #2c89c9;
+  --color-brand-ink: #202e52;
+  --color-brand-gold: #ffc600;
+  --color-brand-gold-dark: #f2b500;
+  --color-brand-cream: #f6f6f6;
+}
+
 @layer base {
   body {
     font-family:
@@ -13,11 +22,42 @@
       Arial,
       sans-serif;
   }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-brand-ink;
+  }
 }
 
 @layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-6xl px-4 md:px-6;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center rounded-full bg-brand-gold px-5 py-3 text-sm font-semibold text-brand-ink transition hover:bg-brand-gold-dark;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center rounded-full border border-brand-blue/20 bg-white px-5 py-3 text-sm font-semibold text-brand-blue transition hover:border-brand-blue;
+  }
+
+  .form-label {
+    @apply flex flex-col gap-2 text-sm font-semibold text-brand-ink;
+  }
+
+  .form-input {
+    @apply rounded-xl border border-brand-blue/20 bg-white px-3 py-2 text-sm text-slate-800 outline-none ring-brand-blue transition focus:border-brand-blue focus:ring-2;
+  }
+
   .article-content h2 {
-    @apply mt-8 text-2xl font-bold text-slate-900;
+    @apply mt-8 text-2xl font-bold text-brand-ink;
+  }
+
+  .article-content h3 {
+    @apply mt-7 text-xl font-semibold text-brand-ink;
   }
 
   .article-content p,

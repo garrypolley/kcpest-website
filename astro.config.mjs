@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://kcpest-website.garrypolley.com",
+  site: process.env.PUBLIC_SITE_URL || "https://kcpest-website.garrypolley.com",
   vite: {
     plugins: [tailwindcss()]
   }

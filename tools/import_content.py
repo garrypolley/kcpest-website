@@ -19,7 +19,7 @@ PAGE_SLUGS = {
     "mosquitos-ticks-pest-control": "mosquitos-ticks-pest-control",
     "pest-control-service": "pest-control-service",
     "pest-control-service-areas": "pest-control-service-areas",
-    "t/tou-and-privacy": "t-tou-and-privacy",
+    "t/tou-and-privacy": "t/tou-and-privacy",
     "gallery": "gallery",
 }
 
@@ -39,9 +39,23 @@ def classify(slug: str) -> str:
 
 def sanitize_preview(text: str) -> str:
     text = re.sub(r"\s+", " ", text).strip()
-    for marker in ("Blog Layout", "REQUEST A SERVICE", "PEST CONTROL SERVICES"):
+    for marker in (
+        "Blog Layout",
+        "GALLERY SHOP",
+        "REQUEST A SERVICE",
+        "PEST CONTROL SERVICES",
+    ):
         if marker in text:
             text = text.split(marker, 1)[-1].strip()
+
+    # Remove repeated nav/menu noise that can still bleed into extracted text.
+    text = re.sub(
+        r"^(?:HOME|PEST CONTROL SERVICES|GENERAL PEST CONTROL|BED BUG EXTERMINATION|TERMITE CONTROL|PRE-CONSTRUCTION TERMITE TREATMENT|RODENT CONTROL|MOSQUITOS\s*&\s*TICKS|SPIDERS|CARPENTER ANTS|HOME PROTECTION PROGRAMS|PROTECTION PROGRAMS|BLOG|SERVICE AREAS|REQUEST A SERVICE|GALLERY|SHOP)\s+",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    text = text.replace("\ufeff", "").strip()
     return text[:500]
 
 
@@ -116,7 +130,7 @@ def main():
             continue
 
         post_slug = slug.replace("/", "-")
-        route = f"/pest-control-blog/{post_slug}"
+        route = f"/{post_slug}"
         body = (
             f"{post_frontmatter(title, description)}"
             "This entry was imported from the existing site crawl and should be manually polished.\n\n"

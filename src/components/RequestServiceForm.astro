@@ -1,0 +1,69 @@
+---
+const formEndpoint = import.meta.env.PUBLIC_FORM_ENDPOINT;
+const useExternalEndpoint = Boolean(formEndpoint);
+const formAction = useExternalEndpoint ? formEndpoint : "/thank-you";
+---
+
+<section id="request-form" class="section-shell pb-16">
+  <div class="rounded-2xl border border-brand-blue/10 bg-white p-6 shadow-sm md:p-8">
+    <h2 class="text-3xl font-black">Request Service</h2>
+    <p class="mt-2 text-slate-600">
+      Tell us what is going on at your property and our team will follow up with scheduling and next steps.
+    </p>
+
+    <form
+      name="service-request"
+      method="POST"
+      action={formAction}
+      data-netlify={useExternalEndpoint ? undefined : "true"}
+      netlify-honeypot={useExternalEndpoint ? undefined : "bot-field"}
+      class="mt-6 grid gap-4 md:grid-cols-2"
+    >
+      <input type="hidden" name="form-name" value="service-request" />
+      <p class="hidden">
+        <label>
+          Do not fill this out if you are human:
+          <input name="bot-field" />
+        </label>
+      </p>
+
+      <label class="form-label">
+        Full Name
+        <input class="form-input" type="text" name="name" required />
+      </label>
+
+      <label class="form-label">
+        Phone Number
+        <input class="form-input" type="tel" name="phone" required />
+      </label>
+
+      <label class="form-label">
+        Email Address
+        <input class="form-input" type="email" name="email" required />
+      </label>
+
+      <label class="form-label">
+        Service Needed
+        <select class="form-input" name="service">
+          <option value="">Select one (optional)</option>
+          <option value="General Pest Control">General Pest Control</option>
+          <option value="Bed Bug Extermination">Bed Bug Extermination</option>
+          <option value="Termite Control">Termite Control</option>
+          <option value="Rodent Control">Rodent Control</option>
+          <option value="Mosquitos and Ticks">Mosquitos and Ticks</option>
+          <option value="Spiders">Spiders</option>
+          <option value="Home Protection Program">Home Protection Program</option>
+        </select>
+      </label>
+
+      <label class="form-label md:col-span-2">
+        Describe Your Issue
+        <textarea class="form-input min-h-32" name="message" required></textarea>
+      </label>
+
+      <div class="md:col-span-2">
+        <button class="button-primary" type="submit">Submit Request</button>
+      </div>
+    </form>
+  </div>
+</section>

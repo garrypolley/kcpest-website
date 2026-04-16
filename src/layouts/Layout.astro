@@ -4,12 +4,41 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  canonicalPath?: string;
+  ogImage?: string;
+  noindex?: boolean;
 }
 
 const {
-  title = "KC Pest Experts | Kansas City Pest Control",
-  description = "Professional pest control services for homes and businesses across the Kansas City metro.",
+  title = "Pest Control | Kansas City, MO | KC Pest Experts",
+  description = "Based in Kansas City, MO, KC Pest Experts provides expert pest control services for your home or business. Call (913) 600-5247 today to learn more!",
+  canonicalPath,
+  ogImage = "/images/logo.webp",
+  noindex = false,
 } = Astro.props;
+
+const siteUrl = Astro.site ?? new URL("https://kcpest-website.garrypolley.com");
+const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, siteUrl).toString();
+const ogImageUrl = new URL(ogImage, siteUrl).toString();
+const robots = noindex ? "noindex, nofollow" : "index, follow";
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "KC Pest Experts",
+  image: [ogImageUrl],
+  url: siteUrl.toString(),
+  telephone: "+1-913-600-5247",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2001 East Prairie Circle, Unit B",
+    addressLocality: "Olathe",
+    addressRegion: "KS",
+    postalCode: "66062",
+    addressCountry: "US",
+  },
+  areaServed: "Kansas City Metro",
+};
 ---
 
 <!doctype html>
@@ -20,41 +49,55 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
   </head>
-  <body class="bg-slate-50 text-slate-800">
-    <header class="border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6">
-        <a href="/" class="text-lg font-extrabold tracking-tight text-blue-900">KC Pest Experts</a>
-        <nav class="hidden gap-5 text-sm font-medium text-slate-700 md:flex">
-          <a class="hover:text-blue-700" href="/">Home</a>
-          <a class="hover:text-blue-700" href="/local-pest-control-experts">Pest Control</a>
-          <a class="hover:text-blue-700" href="/pest-protection-services">Protection Plans</a>
-          <a class="hover:text-blue-700" href="/pest-control-blog">Blog</a>
-          <a class="hover:text-blue-700" href="/pest-control-service">Request Service</a>
+  <body class="bg-brand-cream text-slate-800">
+    <header class="sticky top-0 z-30 border-b border-brand-blue/10 bg-white/95 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-4 md:px-6">
+        <a href="/" class="flex items-center gap-3" aria-label="KC Pest Experts Home">
+          <img src="/images/logo.webp" alt="KC Pest Experts logo" class="h-12 w-auto" loading="eager" />
+        </a>
+        <nav class="hidden items-center gap-5 text-sm font-semibold text-brand-ink md:flex">
+          <a class="transition hover:text-brand-blue" href="/">Home</a>
+          <a class="transition hover:text-brand-blue" href="/local-pest-control-experts">Pest Control</a>
+          <a class="transition hover:text-brand-blue" href="/pest-protection-services">Protection Plans</a>
+          <a class="transition hover:text-brand-blue" href="/pest-control-blog">Blog</a>
+          <a class="inline-flex rounded-full bg-brand-gold px-4 py-2 text-brand-ink transition hover:bg-brand-gold-dark" href="/pest-control-service#request-form">Request Service</a>
         </nav>
       </div>
     </header>
     <main class="min-h-[70vh]">
       <slot />
     </main>
-    <footer class="mt-16 border-t border-slate-200 bg-white">
+    <footer class="mt-16 border-t border-brand-blue/10 bg-white">
       <div class="mx-auto grid w-full max-w-6xl gap-6 px-4 py-10 md:grid-cols-3 md:px-6">
         <div>
-          <h3 class="font-semibold text-slate-900">KC Pest Experts</h3>
+          <h3 class="font-semibold text-brand-blue">KC Pest Experts</h3>
           <p class="mt-2 text-sm text-slate-600">
             2001 East Prairie Circle, Unit B<br />
             Olathe, Kansas 66062
           </p>
         </div>
         <div class="text-sm text-slate-600">
-          <p class="font-semibold text-slate-900">Contact</p>
+          <p class="font-semibold text-brand-blue">Contact</p>
           <p class="mt-2">Phone: (913) 600-5247</p>
           <p>Mon - Fri 8:00 am - 5:00 pm</p>
           <p>Available by Phone 24/7</p>
         </div>
         <div class="text-sm text-slate-600">
-          <p class="font-semibold text-slate-900">Licensing</p>
+          <p class="font-semibold text-brand-blue">Licensing</p>
           <p class="mt-2">Kansas License #KS302495</p>
           <p>Missouri License #MOC23735</p>
           <p>Licensed &amp; Insured in Kansas &amp; Missouri</p>
