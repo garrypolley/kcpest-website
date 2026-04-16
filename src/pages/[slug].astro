@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from "astro:content";
+import CallToAction from "../components/CallToAction.astro";
+import Hero from "../components/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages", ({ id }) => id !== "home");
+  return pages.map((page) => ({ params: { slug: page.id }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<Layout title={page.data.title} description={page.data.description}>
+  <Hero title={page.data.title} subtitle={page.data.description} />
+  <article class="article-content mx-auto max-w-3xl px-4 py-12 md:px-0">
+    <Content />
+  </article>
+  <CallToAction />
+</Layout>

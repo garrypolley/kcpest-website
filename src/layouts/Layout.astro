@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "KC Pest Experts | Kansas City Pest Control",
+  description = "Professional pest control services for homes and businesses across the Kansas City metro.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <header class="border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6">
+        <a href="/" class="text-lg font-extrabold tracking-tight text-blue-900">KC Pest Experts</a>
+        <nav class="hidden gap-5 text-sm font-medium text-slate-700 md:flex">
+          <a class="hover:text-blue-700" href="/">Home</a>
+          <a class="hover:text-blue-700" href="/local-pest-control-experts">Pest Control</a>
+          <a class="hover:text-blue-700" href="/pest-protection-services">Protection Plans</a>
+          <a class="hover:text-blue-700" href="/pest-control-blog">Blog</a>
+          <a class="hover:text-blue-700" href="/pest-control-service">Request Service</a>
+        </nav>
+      </div>
+    </header>
+    <main class="min-h-[70vh]">
+      <slot />
+    </main>
+    <footer class="mt-16 border-t border-slate-200 bg-white">
+      <div class="mx-auto grid w-full max-w-6xl gap-6 px-4 py-10 md:grid-cols-3 md:px-6">
+        <div>
+          <h3 class="font-semibold text-slate-900">KC Pest Experts</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            2001 East Prairie Circle, Unit B<br />
+            Olathe, Kansas 66062
+          </p>
+        </div>
+        <div class="text-sm text-slate-600">
+          <p class="font-semibold text-slate-900">Contact</p>
+          <p class="mt-2">Phone: (913) 600-5247</p>
+          <p>Mon - Fri 8:00 am - 5:00 pm</p>
+          <p>Available by Phone 24/7</p>
+        </div>
+        <div class="text-sm text-slate-600">
+          <p class="font-semibold text-slate-900">Licensing</p>
+          <p class="mt-2">Kansas License #KS302495</p>
+          <p>Missouri License #MOC23735</p>
+          <p>Licensed &amp; Insured in Kansas &amp; Missouri</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

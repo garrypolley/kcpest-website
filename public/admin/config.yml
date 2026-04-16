@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: garrypolley/kcpest-website
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: "https://kcpest-website.garrypolley.com"
+display_url: "https://kcpest-website.garrypolley.com"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "Navigation Label", name: "navLabel", widget: "string", required: false }
+      - { label: "Service Page", name: "isService", widget: "boolean", required: false, default: false }
+      - { label: "Sort Order", name: "order", widget: "number", default: 999 }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "KC Pest Experts" }
+      - { label: "Body", name: "body", widget: "markdown" }
