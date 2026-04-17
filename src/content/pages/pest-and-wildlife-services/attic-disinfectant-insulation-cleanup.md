@@ -28,6 +28,17 @@ After birds, rodents, or other wildlife have been in an attic or crawlspace, the
   </figcaption>
 </figure>
 
+## Why this matters
+
+Disturbing or living above contaminated insulation and droppings is not only unpleasant—it can increase exposure to pathogens and dust from animal waste. Public health guidance from CDC and EPA highlights that animal waste and contaminated dust can increase exposure risks, including:
+
+- **[Leptospirosis](https://www.cdc.gov/leptospirosis/about/index.html)** risk pathways associated with rodent urine contamination in water, soil, and surfaces
+- **[Salmonellosis](https://www.cdc.gov/salmonella/about/index.html)** exposure from environments contaminated by animal droppings
+- **[Tularemia](https://www.cdc.gov/tularemia/causes/index.html)** risk pathways linked to infected wildlife contact and vectors in certain scenarios
+- **[Histoplasmosis](https://www.cdc.gov/histoplasmosis/causes/index.html)** concern when bat or bird droppings are disturbed in enclosed spaces
+
+Removing bulk contamination, then disinfecting and deodorizing treated areas, is how we reduce those risks before new insulation goes in.
+
 ## Contaminant removal
 
 We use specialized high-volume vacuum equipment and controlled removal methods to pull out **contaminated insulation**, **feces**, **carcasses**, and other debris from attics and crawlspaces. The goal is to strip away biohazard-laden material—not just surface clean around it—so sanitizers can reach framing and sheathing where pathogens and odor linger.
@@ -43,6 +54,14 @@ New insulation belongs in a sealed envelope. Before or alongside reinsulation, o
 ## Insulation replacement
 
 When contaminated material is removed, **replacement insulation**—often pest-resistant products where they fit the application—is installed to restore **R-value** and comfort. We align thickness and product choice with your structure and climate zone so performance matches what Kansas City seasons demand.
+
+## Health context references
+
+- [CDC leptospirosis guide](https://www.cdc.gov/leptospirosis/about/index.html)
+- [CDC rodent infestation and disease risks](https://www.cdc.gov/healthy-pets/rodent-control/index.html)
+- [CDC tularemia transmission routes](https://www.cdc.gov/tularemia/causes/index.html)
+- [CDC histoplasmosis and bat droppings risk](https://www.cdc.gov/histoplasmosis/causes/index.html)
+- [EPA-registered disinfectants list](https://www.epa.gov/pesticide-registration/selected-epa-registered-disinfectants)
 
 ## How this fits with wildlife control
 
