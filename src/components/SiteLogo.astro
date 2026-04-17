@@ -1,21 +1,110 @@
 ---
 /**
- * Official lockup from CDN (mirrored locally):
- * https://lirp.cdn-website.com/49c37343/dms3rep/multi/opt/KC-pest-expert-kansas-city-logo-218w.webp
- * Dimensions: 178×52 (same as historical public/images/logo.webp).
+ * Vector lockup in 3 parts (matches 178×52 official WebP layout):
+ * 1) logo-icon — hex + clipped mesh + spider/waive/legs
+ * 2) logo-kcpest — “KC PEST”
+ * 3) logo-experts — “EXPERTS”
+ * Geometry and boxes measured from kc-pest-header-logo.webp / kc-pest-lockup-official.png.
  */
-const LOGO_SRC = "/images/brand/kc-pest-header-logo.webp";
-const LOGO_W = 178;
-const LOGO_H = 52;
+const navy = "#213d81";
+const sky = "#2c89c9";
+const mesh = "#1e3f78";
 ---
 
-<img
-  src={LOGO_SRC}
-  alt=""
-  width={LOGO_W}
-  height={LOGO_H}
+<svg
   class="h-12 w-auto shrink-0"
-  loading="eager"
-  decoding="async"
+  viewBox="0 0 178 52"
+  width="178"
+  height="52"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
   aria-hidden="true"
-/>
+>
+  <title>KC Pest Experts</title>
+  <defs>
+    <clipPath id="logo-hex-inner" clipPathUnits="userSpaceOnUse">
+      <polygon points="22.9,3.1 42.3,14.5 42.3,37.4 21.2,48.0 2.7,37.4 2.7,13.6" />
+    </clipPath>
+    <pattern id="logo-mesh" width="7" height="7" patternUnits="userSpaceOnUse">
+      <path d="M0,0 L7,7 M7,0 L0,7" fill="none" stroke={mesh} stroke-width="0.75" />
+    </pattern>
+  </defs>
+
+  <!-- Part 1: spider / hex (46×52) -->
+  <g id="logo-icon" transform="translate(0,0)">
+    <polygon
+      fill="#ffffff"
+      stroke={navy}
+      stroke-width="2.35"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      points="23,0 45,13 45,39 21,51 0,39 0,12"
+    />
+    <g clip-path="url(#logo-hex-inner)">
+      <rect x="0" y="0" width="46" height="52" fill="url(#logo-mesh)" />
+    </g>
+    <path
+      fill={sky}
+      stroke={navy}
+      stroke-width="1.1"
+      stroke-linejoin="round"
+      d="M15,26 L16,31 L22,37 L27,33 L30,27 Z"
+    />
+    <path
+      fill={sky}
+      stroke={navy}
+      stroke-width="1.1"
+      stroke-linejoin="round"
+      d="M26,22 L22,18 L18,23 Z"
+    />
+    <path fill={navy} d="M17,24.5 L29,24.5 L29,26.1 L17,26.1 Z" />
+    <path
+      fill="none"
+      stroke="#ffffff"
+      stroke-width="2.1"
+      stroke-linecap="round"
+      d="M8,25.5 Q15.5,24.3 23,25.5 T38,25.5"
+    />
+    <g fill="none" stroke={navy} stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M25,17 C31,9 37,5 41,3" />
+      <path d="M31,26 C36,24 40,26 44,26" />
+      <path d="M25,34 C31,42 37,46 41,48" />
+    </g>
+    <g transform="translate(46,0) scale(-1,1)">
+      <g fill="none" stroke={navy} stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M25,17 C31,9 37,5 41,3" />
+        <path d="M31,26 C36,24 40,26 44,26" />
+        <path d="M25,34 C31,42 37,46 41,48" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Part 2: KC PEST — bbox x≈55–177, y≈9–27 in reference -->
+  <g id="logo-kcpest" fill={sky} font-family="'Oswald', 'Arial Narrow', sans-serif" font-weight="700">
+    <text
+      x="55"
+      y="26"
+      font-size="18.2"
+      letter-spacing="0.02em"
+      text-rendering="geometricPrecision"
+      textLength="122"
+      lengthAdjust="spacing">KC PEST</text>
+  </g>
+
+  <!-- Part 3: EXPERTS — bbox x≈54–177, y≈33–42 -->
+  <g
+    id="logo-experts"
+    fill={navy}
+    font-family="'Barlow Semi Condensed', 'Arial Narrow', sans-serif"
+    font-weight="700"
+  >
+    <text
+      x="54"
+      y="41"
+      font-size="8.85"
+      letter-spacing="0.34em"
+      text-rendering="geometricPrecision"
+      textLength="123"
+      lengthAdjust="spacing">EXPERTS</text>
+  </g>
+</svg>
