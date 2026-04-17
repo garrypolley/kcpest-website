@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206 237" role="img" aria-labelledby="title">
+  <title id="title">KC Pest Experts</title>
+  <!-- Colors match src/styles/global.css --brand-blue / --brand-blue-light -->
+  <defs>
+    <style>
+      .fill-dark { fill: #213d81; }
+      .fill-mid { fill: #2c89c9; }
+      .fill-white { fill: #ffffff; }
+      .stroke-dark { stroke: #213d81; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <clipPath id="hex-clip">
+      <path
+        d="M103 18.5 L189.6 68.5 L189.6 168.5 L103 218.5 L16.4 168.5 L16.4 68.5 Z"
+      />
+    </clipPath>
+  </defs>
+  <!-- Pointy-top hex frame (white fill + navy stroke) -->
+  <path
+    class="fill-white stroke-dark"
+    stroke-width="12"
+    d="M103 18.5 L189.6 68.5 L189.6 168.5 L103 218.5 L16.4 168.5 L16.4 68.5 Z"
+  />
+  <g clip-path="url(#hex-clip)">
+  <!-- Upper thorax (almond) -->
+  <ellipse class="fill-mid" stroke="#213d81" stroke-width="3" cx="103" cy="94" rx="14" ry="18" />
+  <!-- Dark waist band -->
+  <rect class="fill-dark" x="86" y="108" width="34" height="14" rx="3" />
+  <!-- Lower abdomen (shield) -->
+  <ellipse class="fill-mid" stroke="#213d81" stroke-width="3" cx="103" cy="152" rx="46" ry="52" />
+  <!-- Legs (dark); right side then mirrored -->
+  <g class="stroke-dark" stroke-width="9">
+    <path d="M118 82 C142 48 168 28 192 20" />
+    <path d="M125 118 C158 112 182 118 198 128" />
+    <path d="M118 168 C142 198 168 218 192 228" />
+  </g>
+  <g transform="translate(206 0) scale(-1 1)">
+    <g class="stroke-dark" stroke-width="9">
+      <path d="M118 82 C142 48 168 28 192 20" />
+      <path d="M125 118 C158 112 182 118 198 128" />
+      <path d="M118 168 C142 198 168 218 192 228" />
+    </g>
+  </g>
+  </g>
+</svg>
