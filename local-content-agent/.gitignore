@@ -1,0 +1,11 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+config.yaml
+cache/
+state/*.local
+state/weekly_series.json
+state/daily_log.json
+state/pending_prompt.txt
+.pytest_cache/

@@ -29,3 +29,8 @@
 - Use concise, conversion-focused CTA language; avoid duplicated visual CTA blocks.
 - Keep homepage/service metadata and FAQ schema accurate and customer-facing.
 - Prefer small, incremental commits; deploy after meaningful user-visible batches.
+
+## Local blog content agent (`local-content-agent/`)
+- Python tool that uses **Ollama**, **DuckDuckGo search**, and optional **embeddings** to draft weekly blog series (hub post + daily supporting posts), runs **`npm run build`** for static validation, scores drafts, and optionally **commits / pushes / Netlify deploys** per `local-content-agent/config.yaml`.
+- Setup and CLI: `local-content-agent/README.md`.
+- Queue a topic with `enqueue`, then run `run-once` or the hourly `daemon` (respects one post per day and a 3pm local cutoff by default).

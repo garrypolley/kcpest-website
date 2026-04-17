@@ -28,6 +28,13 @@ const posts = defineCollection({
     author: z.string().default("KC Pest Experts"),
     coverImage: z.string().optional(),
     coverAlt: z.string().optional(),
+    /** Optional: stable id for a multi-post weekly theme (set by local-content-agent). */
+    seriesTopicId: z.string().optional(),
+    /** Slug of the series hub post (parts link here; hub omits or self-references). */
+    seriesHubSlug: z.string().optional(),
+    /** 0 = hub/overview; 1+ = supporting posts for the same seriesTopicId. */
+    seriesPart: z.number().optional(),
+    seriesTitle: z.string().optional(),
   }),
 });
 

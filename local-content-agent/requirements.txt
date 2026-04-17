@@ -1,0 +1,8 @@
+# Local blog content agent (Ollama + search + RAG)
+requests>=2.31.0
+typing_extensions>=4.12.0
+PyYAML>=6.0.1
+duckduckgo-search>=6.0.0
+trafilatura>=1.9.0
+lxml-html-clean>=0.4.0
+python-slugify>=8.0.0

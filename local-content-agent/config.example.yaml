@@ -1,0 +1,50 @@
+# Copy to config.yaml and adjust paths if needed.
+
+# Repository root (parent of src/content/posts)
+project_root: ".."
+
+# Ollama HTTP API
+ollama:
+  base_url: "http://127.0.0.1:11434"
+  # Main writing model (good instruction-following)
+  chat_model: "llama3.2"
+  # Optional: embedding model for RAG ranking (if absent, keyword scoring is used)
+  embed_model: "nomic-embed-text"
+
+# Search & retrieval
+search:
+  max_results_per_query: 8
+  max_pages_to_fetch: 6
+  chunk_chars: 1200
+  chunk_overlap: 200
+  # Domains get bonus points when scoring source quality
+  trusted_domain_hints:
+    - "cdc.gov"
+    - "epa.gov"
+    - "usda.gov"
+    - "extension.org"
+    - "ksre.k-state.edu"
+    - "extension.missouri.edu"
+
+# Generation loop
+generation:
+  max_attempts: 20
+  min_quality_score: 90
+  min_words: 500
+  min_external_citation_links: 3
+
+# Schedule (local timezone)
+schedule:
+  timezone: "America/Chicago"
+  publish_deadline_hour: 15 # No new daily post started at or after 3pm
+
+# Git / deploy (optional; disable for dry runs)
+publish:
+  enabled: false
+  git_commit: true
+  git_push: true
+  netlify_deploy: false
+  netlify_prod: true
+
+# Default cover when no image is sourced
+default_cover_image: "/images/services/general-pest.jpg"
