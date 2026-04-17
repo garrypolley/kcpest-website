@@ -9,3 +9,5 @@ state/weekly_series.json
 state/daily_log.json
 state/pending_prompt.txt
 .pytest_cache/
+daemon.log
+daemon.pid
