@@ -16,6 +16,7 @@ const serviceLabels = new Set([
   "Spider Control",
   "Carpenter Ant Control",
   "Wildlife Control Services",
+  "Attic Disinfectant & Insulation Cleanup",
 ]);
 const services = (await getCollection("pages"))
   .filter((page) => page.data.navLabel && serviceLabels.has(page.data.navLabel))

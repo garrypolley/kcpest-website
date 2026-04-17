@@ -22,6 +22,7 @@ collections:
       - { label: "Navigation Label", name: "navLabel", widget: "string", required: false }
       - { label: "Service Page", name: "isService", widget: "boolean", required: false, default: false }
       - { label: "Sort Order", name: "order", widget: "number", default: 999 }
+      - { label: "Omit default service preview image", name: "omitServicePreview", widget: "boolean", required: false, default: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "posts"

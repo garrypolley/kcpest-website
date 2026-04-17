@@ -28,6 +28,8 @@ Public health guidance from CDC and EPA highlights that animal waste and contami
 3. Apply commercial-grade disinfectant treatment in affected attic zones
 4. Support a cleaner, safer home environment after removal and cleanup
 
+When attics or crawlspaces need full insulation removal, deodorizing, and reinsulation after heavy contamination, we also plan **[Attic Disinfectant & Insulation Cleanup](/pest-and-wildlife-services/attic-disinfectant-insulation-cleanup)** as the restoration step alongside wildlife control.
+
 Our goal is simple: help families get healthy, comfortable, and confident in their homes again.
 
 ## Health context references

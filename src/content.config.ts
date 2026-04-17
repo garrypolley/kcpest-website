@@ -15,6 +15,7 @@ const pages = defineCollection({
     state: z.string().optional(),
     population: z.number().optional(),
     order: z.number().default(999),
+    omitServicePreview: z.boolean().default(false),
   }),
 });
 

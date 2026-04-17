@@ -36,6 +36,7 @@ const serviceLabels = new Set([
   "Spider Control",
   "Carpenter Ant Control",
   "Wildlife Control Services",
+  "Attic Disinfectant & Insulation Cleanup",
 ]);
 const services = (await getCollection("pages"))
   .filter((page) => page.data.navLabel && serviceLabels.has(page.data.navLabel))
@@ -95,7 +96,7 @@ const formatPubDate = (date: Date) =>
           )
         }
         {
-          isServiceDetailPage && entry.data.previewImage && (
+          isServiceDetailPage && entry.data.previewImage && !entry.data.omitServicePreview && (
             <figure class="mb-8 h-56 overflow-hidden rounded-2xl border border-brand-blue/10 bg-white p-2 shadow-sm md:h-80">
               <img
                 src={entry.data.previewImage}

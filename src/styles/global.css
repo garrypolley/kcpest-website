@@ -72,4 +72,12 @@
   .article-content a {
     @apply font-semibold text-brand-blue underline decoration-brand-blue/60 underline-offset-2 transition hover:text-brand-blue-light hover:decoration-brand-blue-light;
   }
+
+  .article-content figure {
+    @apply my-8;
+  }
+
+  .article-content figcaption a {
+    @apply inline;
+  }
 }
