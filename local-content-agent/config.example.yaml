@@ -6,13 +6,16 @@ project_root: ".."
 # Ollama HTTP API
 ollama:
   base_url: "http://127.0.0.1:11434"
-  # Main writing model (good instruction-following)
-  chat_model: "llama3.2"
+  # Google Gemma 4 (Ollama: https://ollama.com/library/gemma4 )
+  # Use the smallest tag you can: e2b (~7GB) and e4b (~10GB) are built for edge; 26b/31b are much larger.
+  # Pull before first run: ollama pull gemma4:e2b
+  chat_model: "gemma4:e2b"
   # Optional: embedding model for RAG ranking (if absent, keyword scoring is used)
-  embed_model: "nomic-embed-text"
+  embed_model: null
 
 # Search & retrieval
 search:
+  ddg_timeout_seconds: 55
   max_results_per_query: 8
   max_pages_to_fetch: 6
   chunk_chars: 1200
@@ -46,5 +49,6 @@ publish:
   netlify_deploy: false
   netlify_prod: true
 
-# Default cover when no image is sourced
-default_cover_image: "/images/services/general-pest.jpg"
+# Optional: set a default hero image path for every generated post.
+# Leave unset (or null) to publish posts with no cover image until you add real art.
+# default_cover_image: "/images/blog/my-topic.jpg"
