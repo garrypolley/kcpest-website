@@ -1,84 +1,20 @@
 ---
 /**
- * Lockup layout matches public/images/brand/kc-pest-lockup-official.png (178×52).
- * Icon (x 0–46): hex vertices from convex hull of raster; fills from masked color regions;
- * legs + waist authored as stroked paths (mirrored), not merged blob fills.
+ * Pixel-accurate header mark: raster only (matches kc-pest-header-logo.png exactly).
+ * SVG approximations diverge; the shipped PNG is the source of truth.
  */
-const navy = "#213d81";
-const sky = "#2c89c9";
+const LOGO_SRC = "/images/brand/kc-pest-header-logo.png";
+const LOGO_W = 458;
+const LOGO_H = 224;
 ---
 
-<svg
+<img
+  src={LOGO_SRC}
+  alt=""
+  width={LOGO_W}
+  height={LOGO_H}
   class="h-12 w-auto shrink-0"
-  viewBox="0 0 178 52"
-  width="178"
-  height="52"
-  xmlns="http://www.w3.org/2000/svg"
-  role="img"
+  loading="eager"
+  decoding="async"
   aria-hidden="true"
->
-  <title>KC Pest Experts</title>
-  <!-- Icon: local coords 46×52 -->
-  <g id="kcp-icon" transform="translate(0,0)">
-    <!-- 1) Hex frame — vertices from convex hull of lockup icon ink -->
-    <polygon
-      fill="none"
-      stroke={navy}
-      stroke-width="2.35"
-      stroke-linejoin="round"
-      stroke-linecap="round"
-      points="23,0 45,13 45,39 21,51 0,39 0,12"
-    />
-    <!-- 2) Abdomen (medium fill), traced inside hex with color mask -->
-    <path
-      fill={sky}
-      stroke={navy}
-      stroke-width="1.15"
-      stroke-linejoin="round"
-      d="M15,26 L16,31 L22,37 L27,33 L30,27 Z"
-    />
-    <!-- 3) Cephalothorax / head (medium fill) -->
-    <path
-      fill={sky}
-      stroke={navy}
-      stroke-width="1.15"
-      stroke-linejoin="round"
-      d="M26,22 L22,18 L18,23 Z"
-    />
-    <!-- 4) Waist bar between segments -->
-    <path
-      fill={navy}
-      d="M17,24.5 L29,24.5 L29,26.2 L17,26.2 Z"
-    />
-    <!-- 5) Legs: stroked Béziers, right side -->
-    <g fill="none" stroke={navy} stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M25,17 C31,9 37,5 41,3" />
-      <path d="M31,26 C36,24 40,26 44,26" />
-      <path d="M25,34 C31,42 37,46 41,48" />
-    </g>
-    <g transform="translate(46,0) scale(-1,1)">
-      <g fill="none" stroke={navy} stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M25,17 C31,9 37,5 41,3" />
-        <path d="M31,26 C36,24 40,26 44,26" />
-        <path d="M25,34 C31,42 37,46 41,48" />
-      </g>
-    </g>
-  </g>
-  <text
-    x="54"
-    y="27.5"
-    fill={sky}
-    font-family="'Anton', Impact, 'Arial Narrow', sans-serif"
-    font-size="18.5"
-    letter-spacing="0.04em"
-    text-rendering="geometricPrecision">KC PEST</text>
-  <text
-    x="54"
-    y="41.2"
-    fill={navy}
-    font-family="'Barlow Semi Condensed', 'Arial Narrow', sans-serif"
-    font-size="9.25"
-    font-weight="700"
-    letter-spacing="0.36em"
-    text-rendering="geometricPrecision">EXPERTS</text>
-</svg>
+/>
