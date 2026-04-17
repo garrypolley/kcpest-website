@@ -2,7 +2,7 @@
 title: "Pest Control in Prairie Village, KS | KC Pest Experts"
 description: "Local pest and wildlife control services in Prairie Village, KS with treatment plans aligned to neighborhood conditions and seasonal pressure."
 previewImage: "/images/cities/prairie-village-ks.png"
-previewAlt: "Prairie Village, KS city image"
+previewAlt: "Official Prairie Village, KS municipal image"
 isLocation: true
 city: "Prairie Village"
 state: "KS"

@@ -1,8 +1,8 @@
 ---
 title: "Pest Control in Blue Springs, MO | KC Pest Experts"
 description: "Local pest and wildlife control services in Blue Springs, MO with treatment plans aligned to neighborhood conditions and seasonal pressure."
-previewImage: "/images/cities/blue-springs-mo.jpg"
-previewAlt: "Blue Springs, MO city skyline image"
+previewImage: "/images/cities/blue-springs-mo.png"
+previewAlt: "Official Blue Springs, MO municipal image"
 isLocation: true
 city: "Blue Springs"
 state: "MO"

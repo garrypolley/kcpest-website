@@ -1,8 +1,8 @@
 ---
 title: "Pest Control in Gladstone, MO | KC Pest Experts"
 description: "Local pest and wildlife control services in Gladstone, MO with treatment plans aligned to neighborhood conditions and seasonal pressure."
-previewImage: "/images/cities/gladstone-mo.jpg"
-previewAlt: "Gladstone, MO city skyline image"
+previewImage: "/images/cities/gladstone-mo.png"
+previewAlt: "Official Gladstone, MO municipal image"
 isLocation: true
 city: "Gladstone"
 state: "MO"

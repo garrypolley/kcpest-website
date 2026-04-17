@@ -1,8 +1,8 @@
 ---
 title: "Pest Control in Lee's Summit, MO | KC Pest Experts"
 description: "Local pest and wildlife control services in Lee's Summit, MO with treatment plans aligned to neighborhood conditions and seasonal pressure."
-previewImage: "/images/cities/lee-s-summit-mo.jpg"
-previewAlt: "Lee's Summit, MO city skyline image"
+previewImage: "/images/cities/lee-s-summit-mo.png"
+previewAlt: "Official Lee's Summit, MO municipal image"
 isLocation: true
 city: "Lee's Summit"
 state: "MO"

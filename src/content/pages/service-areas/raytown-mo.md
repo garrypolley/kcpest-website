@@ -1,8 +1,8 @@
 ---
 title: "Pest Control in Raytown, MO | KC Pest Experts"
 description: "Local pest and wildlife control services in Raytown, MO with treatment plans aligned to neighborhood conditions and seasonal pressure."
-previewImage: "/images/cities/raytown-mo.jpg"
-previewAlt: "Raytown, MO city skyline image"
+previewImage: "/images/cities/raytown-mo.png"
+previewAlt: "Official Raytown, MO municipal image"
 isLocation: true
 city: "Raytown"
 state: "MO"

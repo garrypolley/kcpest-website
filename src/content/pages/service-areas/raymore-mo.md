@@ -2,7 +2,7 @@
 title: "Pest Control in Raymore, MO | KC Pest Experts"
 description: "Local pest and wildlife control services in Raymore, MO with treatment plans aligned to neighborhood conditions and seasonal pressure."
 previewImage: "/images/cities/raymore-mo.png"
-previewAlt: "Raymore, MO city image"
+previewAlt: "Official Raymore, MO municipal image"
 isLocation: true
 city: "Raymore"
 state: "MO"

@@ -2,7 +2,7 @@
 title: "Pest Control in Belton, MO | KC Pest Experts"
 description: "Local pest and wildlife control services in Belton, MO with treatment plans aligned to neighborhood conditions and seasonal pressure."
 previewImage: "/images/cities/belton-mo.jpg"
-previewAlt: "Belton, MO city image"
+previewAlt: "Official Belton, MO municipal image"
 isLocation: true
 city: "Belton"
 state: "MO"

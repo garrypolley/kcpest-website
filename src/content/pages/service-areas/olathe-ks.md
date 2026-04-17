@@ -2,7 +2,7 @@
 title: "Pest Control in Olathe, KS | KC Pest Experts"
 description: "Local pest and wildlife control services in Olathe, KS with treatment plans aligned to neighborhood conditions and seasonal pressure."
 previewImage: "/images/cities/olathe-ks.jpg"
-previewAlt: "Olathe, KS city image"
+previewAlt: "Official Olathe, KS municipal image"
 isLocation: true
 city: "Olathe"
 state: "KS"

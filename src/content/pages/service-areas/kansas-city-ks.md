@@ -2,7 +2,7 @@
 title: "Pest Control in Kansas City, KS | KC Pest Experts"
 description: "Local pest and wildlife control services in Kansas City, KS focused on dense neighborhood pressure, seasonal invaders, and structural pest prevention."
 previewImage: "/images/cities/kansas-city-ks.jpg"
-previewAlt: "Kansas City, KS city image"
+previewAlt: "Official Kansas City, KS municipal image"
 isLocation: true
 city: "Kansas City"
 state: "KS"

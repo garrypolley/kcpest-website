@@ -2,7 +2,7 @@
 title: "Pest Control in Lenexa, KS | KC Pest Experts"
 description: "Local pest and wildlife control services in Lenexa, KS with treatment plans aligned to neighborhood conditions and seasonal pressure."
 previewImage: "/images/cities/lenexa-ks.jpg"
-previewAlt: "Lenexa, KS city image"
+previewAlt: "Official Lenexa, KS municipal image"
 isLocation: true
 city: "Lenexa"
 state: "KS"

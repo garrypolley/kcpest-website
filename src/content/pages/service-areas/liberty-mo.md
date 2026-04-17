@@ -1,8 +1,8 @@
 ---
 title: "Pest Control in Liberty, MO | KC Pest Experts"
 description: "Local pest and wildlife control services in Liberty, MO with treatment plans aligned to neighborhood conditions and seasonal pressure."
-previewImage: "/images/cities/liberty-mo.jpg"
-previewAlt: "Liberty, MO city skyline image"
+previewImage: "/images/cities/liberty-mo.png"
+previewAlt: "Official Liberty, MO municipal image"
 isLocation: true
 city: "Liberty"
 state: "MO"

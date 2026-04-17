@@ -1,8 +1,8 @@
 ---
 title: "Pest Control in Overland Park, KS | KC Pest Experts"
 description: "Local pest and wildlife control services in Overland Park, KS with treatment plans aligned to neighborhood conditions and seasonal pressure."
-previewImage: "/images/cities/overland-park-ks.jpg"
-previewAlt: "Overland Park, KS city skyline image"
+previewImage: "/images/cities/overland-park-ks.png"
+previewAlt: "Official Overland Park, KS municipal image"
 isLocation: true
 city: "Overland Park"
 state: "KS"

@@ -41,7 +41,7 @@ const services = (await getCollection("pages"))
   .filter((page) => page.data.navLabel && serviceLabels.has(page.data.navLabel))
   .sort((a, b) => a.data.order - b.data.order);
 const locationPages = (await getCollection("pages"))
-  .filter((page) => page.data.isLocation && page.id.startsWith("service-areas/"))
+  .filter((page) => page.data.isLocation && page.id.startsWith("service-areas/") && (page.data.population ?? 0) >= 20000)
   .sort((a, b) => (a.data.city ?? "").localeCompare(b.data.city ?? ""));
 const cleanTitle = (title: string) =>
   title

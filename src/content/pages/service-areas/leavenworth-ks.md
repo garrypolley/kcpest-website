@@ -2,7 +2,7 @@
 title: "Pest Control in Leavenworth, KS | KC Pest Experts"
 description: "Local pest and wildlife control services in Leavenworth, KS with treatment plans aligned to neighborhood conditions and seasonal pressure."
 previewImage: "/images/cities/leavenworth-ks.jpg"
-previewAlt: "Leavenworth, KS city skyline image"
+previewAlt: "Official Leavenworth, KS municipal image"
 isLocation: true
 city: "Leavenworth"
 state: "KS"

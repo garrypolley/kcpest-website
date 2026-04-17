@@ -1,8 +1,8 @@
 ---
 title: "Pest Control in Shawnee, KS | KC Pest Experts"
 description: "Local pest and wildlife control services in Shawnee, KS with treatment plans aligned to neighborhood conditions and seasonal pressure."
-previewImage: "/images/cities/shawnee-ks.jpg"
-previewAlt: "Shawnee, KS city image"
+previewImage: "/images/cities/shawnee-ks.png"
+previewAlt: "Official Shawnee, KS municipal image"
 isLocation: true
 city: "Shawnee"
 state: "KS"

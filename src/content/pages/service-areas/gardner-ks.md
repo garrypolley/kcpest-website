@@ -1,8 +1,8 @@
 ---
 title: "Pest Control in Gardner, KS | KC Pest Experts"
 description: "Local pest and wildlife control services in Gardner, KS with treatment plans aligned to neighborhood conditions and seasonal pressure."
-previewImage: "/images/cities/gardner-ks.jpg"
-previewAlt: "Gardner, KS city image"
+previewImage: "/images/cities/gardner-ks.png"
+previewAlt: "Official Gardner, KS municipal image"
 isLocation: true
 city: "Gardner"
 state: "KS"

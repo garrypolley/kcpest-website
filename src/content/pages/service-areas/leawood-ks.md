@@ -1,8 +1,8 @@
 ---
 title: "Pest Control in Leawood, KS | KC Pest Experts"
 description: "Local pest and wildlife control services in Leawood, KS with treatment plans aligned to neighborhood conditions and seasonal pressure."
-previewImage: "/images/cities/leawood-ks.png"
-previewAlt: "Leawood, KS city image"
+previewImage: "/images/cities/leawood-ks.svg"
+previewAlt: "Official Leawood, KS municipal image"
 isLocation: true
 city: "Leawood"
 state: "KS"
