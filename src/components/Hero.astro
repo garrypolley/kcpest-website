@@ -6,7 +6,9 @@ interface Props {
   ctaLabel?: string;
 }
 
-const { title, subtitle, ctaHref = "/pest-control-service#request-form", ctaLabel = "Request Service" } = Astro.props;
+const requestHref = "/pest-control-service#request-form";
+const { title, subtitle, ctaHref = requestHref, ctaLabel = "Request Service" } = Astro.props;
+const showDesktopRequest = ctaHref !== requestHref;
 ---
 
 <section class="bg-gradient-to-br from-blue-950 via-blue-900 to-sky-700 text-white">
@@ -21,6 +23,7 @@ const { title, subtitle, ctaHref = "/pest-control-service#request-form", ctaLabe
       <h1 class="mt-5 max-w-3xl text-4xl font-black leading-tight tracking-tight text-white md:text-5xl">{title}</h1>
       {subtitle && <p class="mt-5 max-w-2xl text-lg text-blue-100">{subtitle}</p>}
       <div class="mt-8 flex flex-wrap gap-3">
+        {showDesktopRequest && <a href={requestHref} class="button-primary hidden md:inline-flex">Request Service</a>}
         <a href={ctaHref} class="button-primary">{ctaLabel}</a>
         <a
           href="tel:+19136005247"
