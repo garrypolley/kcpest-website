@@ -100,6 +100,7 @@ const localBusinessSchema = {
             </details>
             <a class="block rounded-lg px-3 py-2 text-sm font-semibold text-brand-ink hover:bg-brand-cream" href="/pest-protection-services">Protection Plans</a>
             <a class="block rounded-lg px-3 py-2 text-sm font-semibold text-brand-ink hover:bg-brand-cream" href="/pest-control-blog">Blog</a>
+            <a class="block rounded-lg px-3 py-2 text-sm font-semibold text-brand-blue hover:bg-brand-cream" href="tel:+19136005247">Call (913) 600-5247</a>
             <a class="mt-1 block rounded-lg bg-brand-gold px-3 py-2 text-sm font-semibold text-brand-ink hover:bg-brand-gold-dark" href="/pest-control-service#request-form">Request Service</a>
           </nav>
         </details>
@@ -121,11 +122,12 @@ const localBusinessSchema = {
           </div>
           <a class="transition hover:text-brand-blue" href="/pest-protection-services">Protection Plans</a>
           <a class="transition hover:text-brand-blue" href="/pest-control-blog">Blog</a>
+          <a class="transition text-brand-blue hover:text-brand-blue-light" href="tel:+19136005247">(913) 600-5247</a>
           <a class="inline-flex rounded-full bg-brand-gold px-4 py-2 text-brand-ink transition hover:bg-brand-gold-dark" href="/pest-control-service#request-form">Request Service</a>
         </nav>
       </div>
     </header>
-    <main class="min-h-[70vh]">
+    <main class="min-h-[70vh] pb-20 md:pb-0">
       <slot />
     </main>
     <footer class="mt-16 border-t border-brand-blue/10 bg-white">
@@ -151,5 +153,21 @@ const localBusinessSchema = {
         </div>
       </div>
     </footer>
+    <div class="fixed inset-x-0 bottom-0 z-40 border-t border-brand-blue/10 bg-white/95 p-3 backdrop-blur md:hidden">
+      <div class="mx-auto flex max-w-6xl gap-2">
+        <a
+          href="tel:+19136005247"
+          class="flex-1 rounded-full border border-brand-blue/20 px-4 py-2 text-center text-sm font-semibold text-brand-blue"
+        >
+          Call Now
+        </a>
+        <a
+          href="/pest-control-service#request-form"
+          class="flex-1 rounded-full bg-brand-gold px-4 py-2 text-center text-sm font-semibold text-brand-ink"
+        >
+          Request Service
+        </a>
+      </div>
+    </div>
   </body>
 </html>

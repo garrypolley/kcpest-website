@@ -3,7 +3,9 @@ import { getCollection, render } from "astro:content";
 import CallToAction from "../components/CallToAction.astro";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import ProtectionPlanTiers from "../components/ProtectionPlanTiers.astro";
 import RequestServiceForm from "../components/RequestServiceForm.astro";
+import ServiceFaq from "../components/ServiceFaq.astro";
 import ServiceGrid from "../components/ServiceGrid.astro";
 
 export async function getStaticPaths() {
@@ -101,6 +103,8 @@ const formatPubDate = (date: Date) =>
         }
         <Content />
       </article>
+      {isProtectionPage && <ProtectionPlanTiers />}
+      {isServiceDetailPage && <ServiceFaq serviceId={entry.id} serviceTitle={cleanTitle(entry.data.title)} />}
       {isServicesHubPage && <ServiceGrid services={services} />}
       {isRequestPage ? <RequestServiceForm /> : <CallToAction />}
     </Layout>

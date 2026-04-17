@@ -7,7 +7,7 @@ order: 40
 
 Home Pest Protection Programs in the Kansas City Metro Area
 
-Don't let pests take over your home and cause damage to your property. KC Pest Experts offers proactive treatment plans built around the pests most common in our region.
+Real Problems - Expert Solutions. KC Pest Experts offers proactive home protection plans built around the pests most common in the Kansas City metro.
 
 Our protection plans are designed to help with:
 
@@ -16,4 +16,6 @@ Our protection plans are designed to help with:
 - Rodents, spiders, and more
 - Ongoing prevention and follow-up service
 
-Call **(913) 600-5247** to discuss your home and get a plan that fits your needs.
+Every property is different, so final recommendations are based on your layout, pressure points, and activity level. Our team will walk you through the best option without high-pressure sales.
+
+Call **(913) 600-5247** or request service online to discuss your home and get a plan that fits your needs.

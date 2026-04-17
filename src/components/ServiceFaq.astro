@@ -1,0 +1,223 @@
+---
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  serviceId: string;
+  serviceTitle: string;
+}
+
+const { serviceId, serviceTitle } = Astro.props;
+const serviceSlug = serviceId.split("/").pop() ?? "";
+
+const defaultFaq: FaqItem[] = [
+  {
+    question: "How quickly can service be scheduled?",
+    answer:
+      "Most requests are reviewed quickly during business hours. We prioritize active pest or wildlife issues and provide the earliest available appointment window.",
+  },
+  {
+    question: "Are treatments safe for kids and pets?",
+    answer:
+      "Our team uses treatment plans designed for residential environments and explains any temporary precautions before service starts.",
+  },
+  {
+    question: "Do you provide ongoing prevention plans?",
+    answer:
+      "Yes. We offer recurring service options and follow-up visits to reduce reinfestation risk based on your property and pest pressure.",
+  },
+];
+
+const faqByService: Record<string, FaqItem[]> = {
+  "local-pest-control-experts": [
+    {
+      question: "What pests are covered under general service?",
+      answer:
+        "General service commonly addresses ants, spiders, roaches, occasional invaders, and other household pests based on inspection findings.",
+    },
+    {
+      question: "How often should general pest service be done?",
+      answer:
+        "Most homeowners choose recurring seasonal service. Frequency depends on pest activity, surrounding environment, and risk factors.",
+    },
+    {
+      question: "Can you treat both interior and exterior areas?",
+      answer:
+        "Yes. We evaluate both interior and exterior pressure points and build a treatment plan that supports long-term control.",
+    },
+  ],
+  "bed-bug-service": [
+    {
+      question: "Do you offer bed bug heat treatment?",
+      answer:
+        "Yes. Heat treatment is one of our options and can be highly effective when paired with a full inspection and follow-up plan.",
+    },
+    {
+      question: "How can I tell if I have bed bugs or another issue?",
+      answer:
+        "Common signs include bites after sleeping, spotting on bedding, and visible bugs or shed skins near mattress seams and furniture.",
+    },
+    {
+      question: "Will one visit solve the problem?",
+      answer:
+        "Some infestations require follow-up. We provide clear expectations and next-step guidance based on severity and spread.",
+    },
+  ],
+  "termite-control-service": [
+    {
+      question: "Do you provide termite inspections before treatment?",
+      answer:
+        "Yes. We inspect for active signs, likely entry points, and risk conditions before recommending a treatment strategy.",
+    },
+    {
+      question: "What are common signs of termite activity?",
+      answer:
+        "Mud tubes, damaged wood, and swarmers around windows or lights are common indicators that should be evaluated quickly.",
+    },
+    {
+      question: "Can termite service help prevent future damage?",
+      answer:
+        "Yes. In addition to treatment, we provide prevention recommendations to reduce conditions that attract termite activity.",
+    },
+  ],
+  "pre-construction-termite-treatments": [
+    {
+      question: "When should pre-construction termite treatment happen?",
+      answer:
+        "The best timing is during construction before slab pour and final finishes, when access is ideal for complete coverage.",
+    },
+    {
+      question: "Is this different from post-construction treatment?",
+      answer:
+        "Yes. Pre-construction service is preventive and integrated earlier, while post-construction treatment is typically more reactive.",
+    },
+    {
+      question: "Can builders coordinate directly with your team?",
+      answer:
+        "Absolutely. We coordinate with builders and project managers to keep treatment aligned with construction schedules.",
+    },
+  ],
+  "rodent-pest-control-service": [
+    {
+      question: "Do you only remove rodents, or prevent re-entry too?",
+      answer:
+        "Our approach includes active control and prevention planning, including guidance on exclusion points and sanitation factors.",
+    },
+    {
+      question: "What are signs of a rodent problem?",
+      answer:
+        "Droppings, scratching sounds, gnaw marks, and attic or wall activity are common signs that warrant a professional inspection.",
+    },
+    {
+      question: "How fast should I act on rodent issues?",
+      answer:
+        "As soon as possible. Rodent activity can escalate quickly and increase contamination or property damage risk over time.",
+    },
+  ],
+  "mosquitos-ticks-pest-control": [
+    {
+      question: "When is the best time for mosquito and tick control?",
+      answer:
+        "Seasonal service is most effective when started early and continued through peak activity months in the Kansas City area.",
+    },
+    {
+      question: "Can treatment reduce activity in outdoor living spaces?",
+      answer:
+        "Yes. We target high-risk zones and breeding/concealment areas to improve comfort in yards and gathering spaces.",
+    },
+    {
+      question: "What can homeowners do between visits?",
+      answer:
+        "Reducing standing water, trimming dense vegetation, and improving drainage can support stronger long-term results.",
+    },
+  ],
+  "spider-pest-control-service": [
+    {
+      question: "Why do spiders keep returning indoors?",
+      answer:
+        "Spider activity often follows food sources and entry pathways. Ongoing treatment and exclusion improvements help reduce recurrence.",
+    },
+    {
+      question: "Do you treat web-prone zones and hidden areas?",
+      answer:
+        "Yes. We inspect both visible and less obvious harborage areas and tailor service to your property layout.",
+    },
+    {
+      question: "Is recurring service recommended for spider control?",
+      answer:
+        "In many homes, yes. Recurring service helps maintain control during seasonal peaks and changing weather.",
+    },
+  ],
+  "carpenter-ants-pest-control": [
+    {
+      question: "How are carpenter ants different from other ants?",
+      answer:
+        "Carpenter ants can damage wood structures over time by tunneling, making fast identification and targeted treatment important.",
+    },
+    {
+      question: "Do moisture issues make carpenter ant problems worse?",
+      answer:
+        "Yes. Damp or damaged wood is a common attractant. We identify likely contributing conditions during inspection.",
+    },
+    {
+      question: "Can activity return after treatment?",
+      answer:
+        "It can if moisture and access factors remain. We pair treatment with prevention recommendations to reduce return risk.",
+    },
+  ],
+  "wildlife-control-services": [
+    {
+      question: "What wildlife problems do you commonly handle?",
+      answer:
+        "We commonly help with squirrel, raccoon, and bat-related intrusion concerns plus contamination cleanup planning.",
+    },
+    {
+      question: "Can you help with attic contamination concerns?",
+      answer:
+        "Yes. We focus on contamination risk reduction and can include attic disinfectant treatment recommendations when needed.",
+    },
+    {
+      question: "Why is quick response important for wildlife issues?",
+      answer:
+        "Delays can increase structural damage, odor, and health-risk exposure from droppings or contaminated materials.",
+    },
+  ],
+};
+
+const faqItems = faqByService[serviceSlug] ?? defaultFaq;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<section class="section-shell pb-16">
+  <div class="rounded-2xl border border-brand-blue/10 bg-white p-6 shadow-sm md:p-8">
+    <h2 class="text-2xl font-bold text-brand-ink">Frequently Asked Questions</h2>
+    <p class="mt-2 text-sm text-slate-600">
+      Quick answers about {serviceTitle.toLowerCase()} and what to expect when requesting service.
+    </p>
+    <div class="mt-5 space-y-3">
+      {
+        faqItems.map((item) => (
+          <details class="rounded-xl border border-brand-blue/10 bg-brand-cream/60 p-4">
+            <summary class="cursor-pointer list-none font-semibold text-brand-ink">{item.question}</summary>
+            <p class="mt-3 text-sm leading-7 text-slate-700">{item.answer}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>
