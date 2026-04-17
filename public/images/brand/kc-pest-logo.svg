@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206 237" role="img" aria-labelledby="title">
   <title id="title">KC Pest Experts</title>
-  <!-- Colors match src/styles/global.css --brand-blue / --brand-blue-light -->
+  <!-- Colors match global.css brand-blue (#213d81) and brand-blue-light (#2c89c9) -->
   <defs>
     <style>
       .fill-dark { fill: #213d81; }

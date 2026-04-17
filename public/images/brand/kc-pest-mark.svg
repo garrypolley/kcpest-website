@@ -1,36 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" role="img" aria-hidden="true">
+  <title>KC Pest Experts mark</title>
   <defs>
-    <linearGradient id="fshield" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="shield" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#4da3e8"/>
       <stop offset="100%" stop-color="#2c89c9"/>
     </linearGradient>
     <style>
-      .fnavy { stroke: #213d81; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .navy { stroke: #213d81; fill: none; stroke-linecap: round; stroke-linejoin: round; }
     </style>
   </defs>
-  <rect width="64" height="64" fill="#ffffff"/>
-  <g transform="translate(6 6)">
-    <path
-      fill="#ffffff"
-      stroke="#213d81"
-      stroke-width="3.2"
-      d="M26 6.5 L42.4 16 L42.4 35 L26 44.5 L9.6 35 L9.6 16 Z"
-    />
+  <!-- Pointy-top hex (matches prior header lockup) -->
+  <path
+    fill="#ffffff"
+    stroke="#213d81"
+    stroke-width="3.2"
+    d="M26 6.5 L42.4 16 L42.4 35 L26 44.5 L9.6 35 L9.6 16 Z"
+  />
+  <g>
     <ellipse fill="#4da3e8" stroke="#213d81" stroke-width="1.8" cx="26" cy="15.5" rx="7" ry="5.5"/>
     <path
-      fill="url(#fshield)"
+      fill="url(#shield)"
       stroke="#213d81"
       stroke-width="2"
       d="M26 21.5 C19 21.5 14.5 25.5 14.5 31.5 C14.5 36 19 40.5 26 43.5 C33 40.5 37.5 36 37.5 31.5 C37.5 25.5 33 21.5 26 21.5 Z"
     />
-    <g class="fnavy" stroke-width="2.3">
+    <g class="navy" stroke-width="2.3">
       <path d="M21 16 C11 11 6 7 3 3"/>
       <path d="M19 22 C9 21 5 24 3.5 30"/>
       <path d="M18 28 C9 31 6 36 5 42"/>
       <path d="M20 35 C14 39 12 44 11 49.5"/>
     </g>
     <g transform="translate(52 0) scale(-1 1)">
-      <g class="fnavy" stroke-width="2.3">
+      <g class="navy" stroke-width="2.3">
         <path d="M21 16 C11 11 6 7 3 3"/>
         <path d="M19 22 C9 21 5 24 3.5 30"/>
         <path d="M18 28 C9 31 6 36 5 42"/>
