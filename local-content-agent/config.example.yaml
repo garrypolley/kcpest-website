@@ -6,10 +6,10 @@ project_root: ".."
 # Ollama HTTP API
 ollama:
   base_url: "http://127.0.0.1:11434"
-  # Google Gemma 4 (Ollama: https://ollama.com/library/gemma4 )
-  # Use the smallest tag you can: e2b (~7GB) and e4b (~10GB) are built for edge; 26b/31b are much larger.
-  # Pull before first run: ollama pull gemma4:e2b
-  chat_model: "gemma4:e2b"
+  # Google Gemma — prefer Gemma 4 once Ollama is current: `ollama pull gemma4:e2b` then set chat_model: "gemma4:e2b"
+  # (Older Ollama builds return 412 for gemma4; upgrade from https://ollama.com/download )
+  # Gemma 3 4B is small (~3.3GB) and works well for drafting: `ollama pull gemma3:4b`
+  chat_model: "gemma3:4b"
   # Optional: embedding model for RAG ranking (if absent, keyword scoring is used)
   embed_model: null
 

@@ -4,7 +4,7 @@ Generates **KC Pest Experts** blog posts as markdown under `src/content/posts/`,
 
 ## Prerequisites
 
-- **Ollama** running locally. Default in `config.example.yaml` is **`gemma4:e2b`** (Google Gemma 4, smallest Ollama tag, ~7GB—good for laptops). Pull with `ollama pull gemma4:e2b`. Optional: `nomic-embed-text` for stronger RAG chunk ranking.
+- **Ollama** running locally. Default is **`gemma3:4b`** (~3.3GB). Pull: `ollama pull gemma3:4b`. For **Gemma 4**, upgrade Ollama from [ollama.com/download](https://ollama.com/download) if `ollama pull gemma4:e2b` errors, then set `chat_model` to `gemma4:e2b`. Remove unused huge models to free disk/RAM: `ollama list`, `ollama rm <name>`. Optional: `nomic-embed-text` for RAG.
 - **Node 22+** and project dependencies (`npm install` in the site root).
 - **Git** and optionally **Netlify CLI** (`netlify`) linked to the site.
 
