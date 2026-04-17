@@ -2,7 +2,7 @@
 title: "Pest Control in Grandview, MO | KC Pest Experts"
 description: "Local pest and wildlife control services in Grandview, MO with treatment plans aligned to neighborhood conditions and seasonal pressure."
 previewImage: "/images/cities/grandview-mo.jpg"
-previewAlt: "Official Grandview, MO municipal image"
+previewAlt: "Grandview, MO city landmark photo"
 isLocation: true
 city: "Grandview"
 state: "MO"
