@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Compare two PNGs numerically (pixel RGB). Resizes image B to match image A using LANCZOS.
+Compare two raster images numerically (pixel RGB). Resizes image B to match image A using LANCZOS.
+Supports PNG or WebP (anything Pillow opens).
 
 Usage:
-  python3 scripts/compare_png.py path/to/reference.png path/to/candidate.png
+  python3 scripts/compare_png.py path/to/reference.png path/to/candidate.webp
 
 Exits 0 always; prints MAE, RMSE, max channel diff, % pixels with any channel > 10.
 Useful when iterating on exports or screenshots vs the canonical header asset.
