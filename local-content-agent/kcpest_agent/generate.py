@@ -112,25 +112,32 @@ def assemble_markdown(
     body: str,
     pub_date: str,
     author: str,
-    cover_image: str,
-    cover_alt: str,
     series_topic_id: str,
     series_hub_slug: str,
     series_part: int,
     series_title: str,
+    cover_image: str | None = None,
+    cover_alt: str | None = None,
 ) -> str:
-    return f"""---
-title: {json.dumps(title)}
-description: {json.dumps(description)}
-pubDate: {pub_date}
-author: {json.dumps(author)}
-coverImage: {json.dumps(cover_image)}
-coverAlt: {json.dumps(cover_alt)}
-seriesTopicId: {json.dumps(series_topic_id)}
-seriesHubSlug: {json.dumps(series_hub_slug)}
-seriesPart: {series_part}
-seriesTitle: {json.dumps(series_title)}
----
-
-{body.strip()}
-"""
+    lines = [
+        "---",
+        f"title: {json.dumps(title)}",
+        f"description: {json.dumps(description)}",
+        f"pubDate: {pub_date}",
+        f"author: {json.dumps(author)}",
+    ]
+    if cover_image:
+        lines.append(f"coverImage: {json.dumps(cover_image)}")
+        if cover_alt:
+            lines.append(f"coverAlt: {json.dumps(cover_alt)}")
+    lines.extend(
+        [
+            f"seriesTopicId: {json.dumps(series_topic_id)}",
+            f"seriesHubSlug: {json.dumps(series_hub_slug)}",
+            f"seriesPart: {series_part}",
+            f"seriesTitle: {json.dumps(series_title)}",
+            "---",
+            "",
+        ]
+    )
+    return "\n".join(lines) + body.strip() + "\n"

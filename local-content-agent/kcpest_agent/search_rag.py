@@ -1,11 +1,12 @@
 from __future__ import annotations
 
 import re
+from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import TimeoutError as FuturesTimeout
 from dataclasses import dataclass
 from typing import Any
 from urllib.parse import urlparse
 
-import requests
 import trafilatura
 from duckduckgo_search import DDGS
 
@@ -43,16 +44,25 @@ def score_url_quality(url: str, trusted: list[str]) -> float:
     return s
 
 
-def ddg_search(queries: list[str], max_per: int) -> list[dict[str, str]]:
+def _ddg_text_query(query: str, max_per: int) -> list[dict[str, Any]]:
+    """Run in a thread so we can enforce a wall-clock timeout (DDGS may hang)."""
+    ddgs = DDGS()
+    return list(ddgs.text(query, max_results=max_per))
+
+
+def ddg_search(queries: list[str], max_per: int, *, timeout_s: float = 55.0) -> list[dict[str, str]]:
     results: list[dict[str, str]] = []
     seen: set[str] = set()
-    ddgs = DDGS()
     for q in queries:
         try:
-            stream = ddgs.text(q, max_results=max_per)
+            with ThreadPoolExecutor(max_workers=1) as pool:
+                fut = pool.submit(_ddg_text_query, q, max_per)
+                items = fut.result(timeout=timeout_s)
+        except FuturesTimeout:
+            continue
         except Exception:
             continue
-        for item in stream:
+        for item in items:
             href = item.get("href") or item.get("url") or ""
             if not href or href in seen:
                 continue
@@ -111,7 +121,11 @@ def build_rag_context(
         f"{topic} extension university integrated pest management",
     ]
 
-    hits = ddg_search(queries, max_r)
+    ddg_timeout = float(s_cfg.get("ddg_timeout_seconds", 55))
+    hits = ddg_search(queries, max_r, timeout_s=ddg_timeout)
+    if not hits:
+        # Last-resort single query without site: operators (DDGS occasionally stalls on complex queries)
+        hits = ddg_search([topic[:200]], min(5, max_r), timeout_s=ddg_timeout)
     docs: list[SourceDoc] = []
     for h in hits:
         url = h["href"]

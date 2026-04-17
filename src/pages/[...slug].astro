@@ -58,7 +58,7 @@ const pageOgImage =
       : isProtectionPage
         ? "/images/protection-plan-graphic.png"
         : defaultPageOgImage
-    : entry.data.coverImage ?? defaultServiceOgImage;
+    : entry.data.coverImage ?? "/images/logo.webp";
 const pageOgImageAlt =
   entryType === "page"
     ? entry.data.previewAlt ?? `${cleanTitle(entry.data.title)} service preview`

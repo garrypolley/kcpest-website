@@ -195,19 +195,25 @@ def run_once(agent_root: Path, *, dry_run: bool = False) -> int:
                 siblings=sibs,
             )
 
-        cover = cfg.get("default_cover_image", "/images/services/general-pest.jpg")
+        raw_cover = cfg.get("default_cover_image")
+        if raw_cover is None or str(raw_cover).strip() == "":
+            cover: str | None = None
+            cover_alt: str | None = None
+        else:
+            cover = str(raw_cover).strip()
+            cover_alt = title[:120]
         md = assemble_markdown(
             title=title,
             description=description,
             body=body_final,
             pub_date=today_iso(tz),
             author="KC Pest Experts",
-            cover_image=cover,
-            cover_alt=title[:120],
             series_topic_id=series.topic_id,
             series_hub_slug=hub_slug,
             series_part=part_num,
             series_title=series_title,
+            cover_image=cover,
+            cover_alt=cover_alt,
         )
 
         out_path = posts_dir / f"{slug}.md"
