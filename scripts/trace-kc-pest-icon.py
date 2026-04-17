@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
-Trace kc-pest-lockup-official.png icon into SVG paths (color layers + holes).
-Usage: python3 scripts/trace-kc-pest-icon.py
+Analyze kc-pest-lockup-official.png icon column and print reference geometry
+for hand-authored SVG (hex hull, medium-blue regions inside eroded hex).
+
+Does not auto-generate the full logo; legs remain stroked paths in SiteLogo.astro.
+
+Requires: pip install opencv-python-headless numpy pillow
 """
 from __future__ import annotations
 
@@ -13,29 +17,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "public/images/brand/kc-pest-lockup-official.png"
-ICON_RIGHT = 46
-
-
-def contour_to_path(cnt: np.ndarray, epsilon: float) -> str:
-    cnt = cv2.approxPolyDP(cnt, epsilon, True)
-    if len(cnt) < 3:
-        return ""
-    pts = cnt.reshape(-1, 2).astype(float)
-    x0, y0 = pts[0]
-    parts = [f"M{x0:.2f} {y0:.2f}"]
-    for x, y in pts[1:]:
-        parts.append(f"L{x:.2f} {y:.2f}")
-    parts.append("Z")
-    return "".join(parts)
-
-
-def compound_path(contours: list, eps: float) -> str:
-    bits: list[str] = []
-    for cnt in contours:
-        p = contour_to_path(cnt, eps)
-        if p:
-            bits.append(p)
-    return " ".join(bits)
+ICON_W = 46
 
 
 def main() -> None:
@@ -43,43 +25,46 @@ def main() -> None:
     if bgra is None:
         print("Missing", SRC, file=sys.stderr)
         sys.exit(1)
-    bgr = bgra[:, :, :3]
-    alpha = bgra[:, :, 3] if bgra.shape[2] == 4 else np.full(bgr.shape[:2], 255, dtype=np.uint8)
-    icon = bgr[:, :ICON_RIGHT].copy()
-    aicon = alpha[:, :ICON_RIGHT]
-    white = np.ones_like(icon) * 255
-    a3 = (aicon.astype(np.float32) / 255.0)[:, :, None]
-    comp = (icon.astype(np.float32) * a3 + white.astype(np.float32) * (1 - a3)).astype(np.uint8)
-
+    icon = bgra[:, :ICON_W]
+    bgr = icon[:, :, :3]
+    a = icon[:, :, 3]
+    white = np.ones_like(bgr) * 255
+    a3 = (a.astype(np.float32) / 255.0)[:, :, None]
+    comp = (bgr.astype(np.float32) * a3 + white.astype(np.float32) * (1 - a3)).astype(np.uint8)
     flat = comp.reshape(-1, 3).astype(np.float32)
     med = np.array([188, 136, 44], dtype=np.float32)
     dark = np.array([128, 60, 32], dtype=np.float32)
-    d_med = np.linalg.norm(flat - med, axis=1)
-    d_dark = np.linalg.norm(flat - dark, axis=1)
-    thresh = 48.0
-    med_mask = ((d_med < thresh) & (d_med <= d_dark)).reshape(comp.shape[:2]).astype(np.uint8) * 255
-    dark_mask = ((d_dark < thresh) & (d_dark < d_med)).reshape(comp.shape[:2]).astype(np.uint8) * 255
-    k = np.ones((3, 3), np.uint8)
-    med_mask = cv2.morphologyEx(med_mask, cv2.MORPH_CLOSE, k)
-    dark_mask = cv2.morphologyEx(dark_mask, cv2.MORPH_CLOSE, k)
+    d_med = np.linalg.norm(flat - med, axis=1).reshape(comp.shape[:2])
+    d_dark = np.linalg.norm(flat - dark, axis=1).reshape(comp.shape[:2])
+    med_m = ((d_med < 45) & (d_med <= d_dark)).astype(np.uint8) * 255
 
-    med_hex = "#2c89c9"
-    dark_hex = "#213d81"
+    gray = cv2.cvtColor(comp, cv2.COLOR_BGR2GRAY)
+    _, bw = cv2.threshold(gray, 250, 255, cv2.THRESH_BINARY_INV)
+    cnts, _ = cv2.findContours(bw, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    cnt = max(cnts, key=cv2.contourArea)
+    hull = cv2.convexHull(cnt)
+    eps = 0.02 * cv2.arcLength(hull, True)
+    hexv = cv2.approxPolyDP(hull, eps, True).reshape(-1, 2)
 
-    print(f"<!-- source: {SRC.name}, icon x∈[0,{ICON_RIGHT}) -->")
+    print("Hex hull vertices (lockup icon, convex):")
+    for x, y in hexv:
+        print(f"  {int(x)},{int(y)}")
 
-    cnts_m, _ = cv2.findContours(med_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    cnts_m = sorted(cnts_m, key=cv2.contourArea, reverse=True)
-    if cnts_m and cv2.contourArea(cnts_m[0]) > 10:
-        d = contour_to_path(cnts_m[0], 1.0)
-        print(f'<path class="logo-fill" fill="{med_hex}" d="{d}"/>')
-
-    cnts_d, _ = cv2.findContours(dark_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    if len(cnts_d) > 0:
-        dcompound = compound_path(cnts_d, 0.75)
-        print(
-            f'<path class="logo-stroke" fill="{dark_hex}" fill-rule="evenodd" d="{dcompound}"/>'
-        )
+    hull_pts = hexv.astype(np.int32)
+    mask = np.zeros(comp.shape[:2], dtype=np.uint8)
+    cv2.fillConvexPoly(mask, hull_pts, 255)
+    kernel = np.ones((3, 3), np.uint8)
+    mask = cv2.erode(mask, kernel, iterations=2)
+    med_m = cv2.bitwise_and(med_m, med_m, mask=mask)
+    cnts2, _ = cv2.findContours(med_m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    print("\nMedium-blue regions (simplified):")
+    for c in sorted(cnts2, key=cv2.contourArea, reverse=True):
+        if cv2.contourArea(c) < 5:
+            continue
+        ap = cv2.approxPolyDP(c, 1.0, True)
+        pts = ap.reshape(-1, 2)
+        d = "M" + " L".join(f"{p[0]:.0f},{p[1]:.0f}" for p in pts) + "Z"
+        print(f"  area≈{cv2.contourArea(c):.0f}  {d}")
 
 
 if __name__ == "__main__":
