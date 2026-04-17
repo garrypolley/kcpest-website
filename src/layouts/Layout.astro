@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import SiteLogo from "../components/SiteLogo.astro";
 
 interface Props {
   title?: string;
@@ -60,6 +61,12 @@ const localBusinessSchema = {
     <meta name="description" content={description} />
     <meta name="robots" content={robots} />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syncopate:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
@@ -81,20 +88,8 @@ const localBusinessSchema = {
   <body class="bg-brand-cream text-slate-800">
     <header class="sticky top-0 z-30 border-b border-brand-blue/10 bg-white/95 backdrop-blur">
       <div class="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-4 md:px-6">
-        <a href="/" class="flex items-center gap-2.5 md:gap-3" aria-label="KC Pest Experts Home">
-          <img
-            src="/images/brand/kc-pest-mark.svg"
-            alt=""
-            class="h-12 w-auto shrink-0"
-            width="206"
-            height="237"
-            loading="eager"
-            aria-hidden="true"
-          />
-          <span class="flex flex-col leading-none">
-            <span class="text-xl font-extrabold tracking-tight text-brand-blue-light sm:text-2xl">KC PEST</span>
-            <span class="mt-1 text-[0.65rem] font-bold tracking-[0.32em] text-brand-blue sm:text-xs sm:tracking-[0.28em]">EXPERTS</span>
-          </span>
+        <a href="/" class="flex items-center" aria-label="KC Pest Experts Home">
+          <SiteLogo />
         </a>
         <details class="relative md:hidden">
           <summary class="list-none cursor-pointer rounded-lg border border-brand-blue/20 px-3 py-2 text-sm font-semibold text-brand-blue">
