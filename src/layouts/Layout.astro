@@ -33,6 +33,11 @@ const localBusinessSchema = {
   image: [ogImageUrl],
   url: siteUrl.toString(),
   telephone: "+1-913-600-5247",
+  sameAs: [
+    "https://yelp.com/biz/kc-pest-experts-olathe",
+    "https://facebook.com/profile.php?id=100083075783752",
+    "https://instagram.com/kcpestexperts/",
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "2001 East Prairie Circle, Unit B",
@@ -131,6 +136,18 @@ const localBusinessSchema = {
       <slot />
     </main>
     <footer class="mt-16 border-t border-brand-blue/10 bg-white">
+      <div class="mx-auto w-full max-w-6xl px-4 pt-8 md:px-6">
+        <a
+          href="/pest-control-service-areas"
+          class="block rounded-2xl border border-brand-blue/10 bg-brand-cream/60 p-5 transition hover:shadow-md"
+        >
+          <p class="text-xs font-semibold uppercase tracking-wide text-brand-blue">Areas Served</p>
+          <h3 class="mt-1 text-lg font-bold text-brand-ink">Explore City-Specific KC Metro Service Pages</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            View service-area cards, local pest trends, and neighborhood-specific recommendations.
+          </p>
+        </a>
+      </div>
       <div class="mx-auto grid w-full max-w-6xl gap-6 px-4 py-10 md:grid-cols-3 md:px-6">
         <div>
           <h3 class="font-semibold text-brand-blue">KC Pest Experts</h3>

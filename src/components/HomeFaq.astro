@@ -1,0 +1,116 @@
+---
+const faqItems = [
+  {
+    question: "What areas do KC Pest Experts serve?",
+    answer:
+      "We serve the Kansas City metro across Kansas and Missouri, including major suburbs and surrounding communities with populations above 5,000.",
+  },
+  {
+    question: "How quickly can I get pest control service?",
+    answer:
+      "Most requests are reviewed quickly during business hours. Active infestations and urgent wildlife concerns are prioritized when scheduling.",
+  },
+  {
+    question: "Do you offer wildlife control in attics and crawlspaces?",
+    answer:
+      "Yes. We help with squirrel, raccoon, bat, and other wildlife-related concerns, including contamination-risk cleanup planning.",
+  },
+  {
+    question: "Are your treatments safe for families and pets?",
+    answer:
+      "We use treatment strategies designed for residential environments and provide clear prep and post-service instructions.",
+  },
+  {
+    question: "Do you provide recurring pest prevention plans?",
+    answer:
+      "Yes. We offer recurring service plans to reduce reinfestation risk and maintain coverage through seasonal pest cycles.",
+  },
+  {
+    question: "Can I call instead of filling out the request form?",
+    answer: "Absolutely. You can call KC Pest Experts directly at (913) 600-5247 for scheduling and service questions.",
+  },
+  {
+    question: "What pests are most common in the KC metro?",
+    answer:
+      "Common issues include ants, spiders, roaches, termites, rodents, mosquitoes, ticks, and seasonal invaders depending on neighborhood conditions.",
+  },
+  {
+    question: "Do you handle bed bug heat treatment?",
+    answer:
+      "Yes. Bed bug heat treatment is available as part of our service options when appropriate for the property and infestation level.",
+  },
+  {
+    question: "Can you help with termite prevention and treatment?",
+    answer:
+      "Yes. We provide termite inspections, treatment planning, and pre-construction termite service coordination.",
+  },
+  {
+    question: "Do you service both homes and businesses?",
+    answer:
+      "Yes. We provide pest and wildlife solutions for residential and commercial properties across the metro area.",
+  },
+  {
+    question: "How do I know which protection plan is right for my home?",
+    answer:
+      "We recommend plans based on property layout, local pressure, and pest history, then tailor service to your goals and budget.",
+  },
+  {
+    question: "Do you offer mosquito and tick control?",
+    answer:
+      "Yes. We provide seasonal mosquito and tick service focused on reducing outdoor activity in yards and gathering spaces.",
+  },
+  {
+    question: "What should I do before a service visit?",
+    answer:
+      "After booking, we share any required prep steps for your service type so treatment can be completed effectively and safely.",
+  },
+  {
+    question: "Can you treat rodent issues and prevent re-entry?",
+    answer:
+      "Yes. We address active rodent issues and provide prevention guidance for exclusion, sanitation, and follow-up control.",
+  },
+  {
+    question: "Do city-specific pages include local pest risks?",
+    answer:
+      "Yes. Our areas-served pages highlight common local conditions, typical pest pressure, and the services most relevant for each city.",
+  },
+  {
+    question: "How do I request a free estimate?",
+    answer:
+      "Use the Request Service form on the site or call (913) 600-5247 and our team will follow up with next steps.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<section class="section-shell pb-16">
+  <div class="rounded-2xl border border-brand-blue/10 bg-white p-6 shadow-sm md:p-8">
+    <h2 class="text-2xl font-bold text-brand-ink">Kansas City Pest Control FAQs</h2>
+    <p class="mt-2 text-sm text-slate-600">
+      Direct answers to common service and scheduling questions to help homeowners and businesses make faster decisions.
+    </p>
+    <div class="mt-5 grid gap-3 md:grid-cols-2">
+      {
+        faqItems.map((item) => (
+          <details class="rounded-xl border border-brand-blue/10 bg-brand-cream/60 p-4">
+            <summary class="cursor-pointer list-none font-semibold text-brand-ink">{item.question}</summary>
+            <p class="mt-3 text-sm leading-7 text-slate-700">{item.answer}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>

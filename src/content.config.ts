@@ -10,6 +10,10 @@ const pages = defineCollection({
     previewAlt: z.string().optional(),
     navLabel: z.string().optional(),
     isService: z.boolean().default(false),
+    isLocation: z.boolean().default(false),
+    city: z.string().optional(),
+    state: z.string().optional(),
+    population: z.number().optional(),
     order: z.number().default(999),
   }),
 });

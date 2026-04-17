@@ -1,7 +1,7 @@
 ---
 import { getCollection, getEntry } from "astro:content";
-import CallToAction from "../components/CallToAction.astro";
 import Hero from "../components/Hero.astro";
+import HomeFaq from "../components/HomeFaq.astro";
 import ServiceGrid from "../components/ServiceGrid.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -46,16 +46,7 @@ const services = (await getCollection("pages"))
         <span class="rounded-full bg-brand-blue/10 px-4 py-2 text-brand-blue">Kansas License #KS302495</span>
         <span class="rounded-full bg-brand-blue/10 px-4 py-2 text-brand-blue">Missouri License #MOC23735</span>
       </div>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a href="/pest-control-service#request-form" class="button-primary">Request Service</a>
-        <a
-          href="tel:+19136005247"
-          class="inline-flex items-center rounded-full border border-brand-blue/20 bg-white px-5 py-3 text-sm font-semibold text-brand-blue transition hover:border-brand-blue"
-        >
-          Call (913) 600-5247
-        </a>
-      </div>
     </div>
   </section>
-  <CallToAction />
+  <HomeFaq />
 </Layout>

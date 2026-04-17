@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import CallToAction from "../components/CallToAction.astro";
+import AreasServedGrid from "../components/AreasServedGrid.astro";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import ProtectionPlanTiers from "../components/ProtectionPlanTiers.astro";
@@ -24,6 +25,7 @@ const isProtectionPage = entryType === "page" && entry.id === "pest-protection-s
 const isRequestPage = entryType === "page" && entry.id === "pest-control-service";
 const isServicesHubPage = entryType === "page" && entry.id === "pest-and-wildlife-services";
 const isServiceDetailPage = entryType === "page" && entry.id.startsWith("pest-and-wildlife-services/");
+const isServiceAreasHubPage = entryType === "page" && entry.id === "pest-control-service-areas";
 const serviceLabels = new Set([
   "General Pest Control",
   "Bed Bug Extermination",
@@ -38,6 +40,9 @@ const serviceLabels = new Set([
 const services = (await getCollection("pages"))
   .filter((page) => page.data.navLabel && serviceLabels.has(page.data.navLabel))
   .sort((a, b) => a.data.order - b.data.order);
+const locationPages = (await getCollection("pages"))
+  .filter((page) => page.data.isLocation && page.id.startsWith("service-areas/"))
+  .sort((a, b) => (a.data.city ?? "").localeCompare(b.data.city ?? ""));
 const cleanTitle = (title: string) =>
   title
     .replace(/\s*\|\s*Kansas City,\s*MO\s*\|\s*KC Pest Experts\s*$/i, "")
@@ -106,6 +111,7 @@ const formatPubDate = (date: Date) =>
       {isProtectionPage && <ProtectionPlanTiers />}
       {isServiceDetailPage && <ServiceFaq serviceId={entry.id} serviceTitle={cleanTitle(entry.data.title)} />}
       {isServicesHubPage && <ServiceGrid services={services} />}
+      {isServiceAreasHubPage && <AreasServedGrid locations={locationPages} />}
       {isRequestPage ? <RequestServiceForm /> : <CallToAction />}
     </Layout>
   ) : (

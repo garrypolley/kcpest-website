@@ -1,20 +1,15 @@
 ---
 title: "Local Pest Control | Kansas City, MO | KC Pest Experts"
-description: "KC Pest Experts serves homes and businesses throughout the Kansas City metro area in Kansas and Missouri."
+description: "City-specific pest and wildlife service pages for KC metro communities across Kansas and Missouri."
 order: 30
 ---
 
-KC Pest Experts serves customers across the Kansas City metro area, including:
+KC Pest Experts serves communities across the Kansas City metro with city-specific pages tailored to local pest pressure and property conditions.
 
-- Olathe
-- Overland Park
-- Lenexa
-- Shawnee
-- Mission
-- Leawood
-- Prairie Village
-- Gardner
-- Lee's Summit
-- Independence
+Each location page includes:
 
-If your city is nearby and not listed, contact us and we will confirm service availability.
+- The most common pest and wildlife concerns for that area
+- Recommended services based on local conditions
+- Fast links to request service or call directly
+
+Browse the cards below to find your city.
