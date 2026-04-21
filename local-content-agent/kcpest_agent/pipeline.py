@@ -21,6 +21,7 @@ from kcpest_agent.generate import (
     generate_hub_week_json,
 )
 from kcpest_agent.hub_links import render_series_block, upsert_hub_series_section
+from kcpest_agent.internal_links import sanitize_fabricated_kcpext_urls
 from kcpest_agent.quality import (
     combined_score,
     heuristic_score,
@@ -219,7 +220,7 @@ def start_week(
 
         title = str(data["title"]).strip()
         description = str(data["description"]).strip()
-        body = str(data["body"]).strip()
+        body = sanitize_fabricated_kcpext_urls(str(data["body"]).strip())
         planned_raw = data["planned_subposts"]
 
         slug = hub_slug
@@ -444,7 +445,7 @@ def _try_publish_subpost(
 
         title = str(data["title"]).strip()
         description = str(data["description"]).strip()
-        body = str(data["body"]).strip()
+        body = sanitize_fabricated_kcpext_urls(str(data["body"]).strip())
 
         too_close, reason = overlap_with_any(body, prior_bodies, threshold=th_use)
         if too_close:

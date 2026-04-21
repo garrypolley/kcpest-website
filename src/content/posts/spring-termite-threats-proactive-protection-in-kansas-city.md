@@ -32,7 +32,7 @@ Starting termite protection in the spring focuses on disrupting the termite’s 
 *   **Moisture Control:** Termites thrive in moist environments. Address any leaks, drainage issues, or excessive moisture around your home’s foundation.
 *   **Remove Wood-to-Soil Contact:** Clear away vegetation, mulch, and debris that can provide termites with access to your foundation.
 
-**Don’t Delay – Schedule a Professional Inspection** Early detection is key. KC Pest Experts can provide a comprehensive termite inspection and recommend the most effective treatment options for your specific situation. [KC Pest Experts - Termite Inspection](https://kcpext.com/services/termite-inspection/) – Contact us today for a free estimate!
+**Don’t Delay – Schedule a Professional Inspection** Early detection is key. KC Pest Experts can provide a comprehensive termite inspection and recommend the most effective treatment options for your specific situation. [KC Pest Experts - termite control](/pest-and-wildlife-services/termite-control-service) – Contact us today for a free estimate!
 
 [series overview](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
 

@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from typing import Any
 
+from kcpest_agent.internal_links import INTERNAL_SERVICE_CTA_BLOCK
 from kcpest_agent.ollama_client import chat, parse_json_loose
 
 
@@ -40,6 +41,7 @@ Rules:
 - Use markdown: start body with an intro paragraph, then use ## and ### headings, bullet lists where helpful.
 - Include **at least 4** distinct markdown links to authoritative sources (HTTPS) such as CDC, EPA, USDA, or university extension (.edu). Inline citations like [CDC topic](url).
 - Add a final ## Sources section listing the same links with one-line descriptions.
+{INTERNAL_SERVICE_CTA_BLOCK}
 - Local angle: mention Kansas City region where natural (outdoor pests, seasonal timing)—avoid fabricating statistics.
 - Do NOT include YAML frontmatter in the body; JSON only below.
 
@@ -103,6 +105,8 @@ def build_hub_week_messages(
     system = f"""You are a senior pest-control marketer and educator for KC Pest Experts (Kansas City metro).
 
 Write the **weekly series hub**—a **short editorial trailer**, not a full deep-dive article.
+
+{INTERNAL_SERVICE_CTA_BLOCK}
 
 **Hub role (critical):**
 - This post is the **table of contents + why it matters in 1–2 screens of reading**. The three follow-up posts will carry the heavy how-to and pest-specific detail.

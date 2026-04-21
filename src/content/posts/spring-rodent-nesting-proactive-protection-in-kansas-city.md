@@ -37,7 +37,7 @@ Given this active nesting period, immediate action is crucial. Here’s what you
 
 ## Working with a Pest Control Professional
 
-While DIY measures can be effective, a professional pest control service offers expertise and targeted treatments. A technician can accurately identify rodent species, assess your property’s vulnerabilities, and develop a customized control plan. They can also utilize rodenticides safely and effectively, minimizing risks to pets and children. [Kansas City Pest Experts - Rodent Control](https://www.kcpext.com/services/rodent-control) 
+While DIY measures can be effective, a professional pest control service offers expertise and targeted treatments. A technician can accurately identify rodent species, assess your property’s vulnerabilities, and develop a customized control plan. They can also utilize rodenticides safely and effectively, minimizing risks to pets and children. [Kansas City Pest Experts - Rodent Control](/pest-and-wildlife-services/rodent-pest-control-service) 
 
 **Disclaimer:** *While proactive measures can significantly reduce the risk of rodent infestations, results may vary depending on factors such as property conditions and rodent behavior. Always consult with a qualified pest control professional for personalized advice and treatment.*
 
