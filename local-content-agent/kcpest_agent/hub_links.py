@@ -3,6 +3,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from kcpest_agent.schedule_public import is_schedule_day_public_central
+
 MARK_BEGIN = "<!-- kcpest-series:begin -->"
 MARK_END = "<!-- kcpest-series:end -->"
 
@@ -11,7 +13,7 @@ def render_series_block(
     hub_slug: str,
     series_title: str,
     *,
-    siblings: list[tuple[str, str]],  # (title, slug)
+    siblings: list[tuple[str, str, str]],  # (title, slug, published_on YYYY-MM-DD)
     current_slug: str,
 ) -> str:
     hub_url = f"/{hub_slug}"
@@ -24,9 +26,13 @@ def render_series_block(
     if len(siblings) > 1:
         lines.append("**Articles in this series:**")
         lines.append("")
-        for title, slug in siblings:
-            mark = " *(this article)*" if slug == current_slug else ""
-            lines.append(f"- [{title}](/{slug}){mark}")
+        for title, slug, published_on in siblings:
+            if slug == current_slug:
+                lines.append(f"- {title} *(this article)*")
+            elif is_schedule_day_public_central(published_on):
+                lines.append(f"- [{title}](/{slug})")
+            else:
+                lines.append(f"- **Coming soon:** {title}")
         lines.append("")
     return "\n".join(lines)
 
@@ -35,7 +41,8 @@ def upsert_hub_series_section(
     hub_path: Path,
     *,
     series_title: str,
-    entries: list[tuple[str, str]],  # title, slug — hub first
+    # (title, slug, published_on YYYY-MM-DD) — hub first; use same Central-day rule as the live site
+    entries: list[tuple[str, str, str]],
 ) -> None:
     text = hub_path.read_text(encoding="utf-8")
     fm_match = re.match(r"^(---\s*\n.*?\n---\s*\n)([\s\S]*)$", text, re.DOTALL)
@@ -50,8 +57,11 @@ def upsert_hub_series_section(
         f"_{series_title}_",
         "",
     ]
-    for title, slug in entries:
-        block_lines.append(f"- [{title}](/{slug})")
+    for title, slug, published_on in entries:
+        if is_schedule_day_public_central(published_on):
+            block_lines.append(f"- [{title}](/{slug})")
+        else:
+            block_lines.append(f"- **Coming soon:** {title}")
     block_lines.extend(["", MARK_END, ""])
 
     block = "\n".join(block_lines)

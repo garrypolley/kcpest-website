@@ -16,11 +16,16 @@ def build_messages(
     hub_slug: str | None,
     part_number: int,
     prior_posts_summary: str,
+    prior_content_excerpts: str = "",
+    subpost_focus: str = "",
 ) -> list[dict[str, str]]:
     role_hint = (
         "Write the **overview / hub** article: high-level, sets up the week’s theme, and points readers to what we will cover in follow-ups."
         if role == "hub"
-        else "Write a **supporting** article: specific subtopic with practical detail that expands on the weekly theme. Assume readers may also read the overview."
+        else (
+            "Write a **deep-dive sub-article** for this week’s series only: one focused subtopic with action steps, examples, and clear next steps. "
+            "Readers already read the series overview—**do not** re-explain the whole weekly theme or repeat the overview’s structure."
+        )
     )
     hub_line = (
         f"The series hub slug (for linking) will be `{hub_slug}`."
@@ -53,7 +58,27 @@ User request:
 
 Prior posts in this series (titles only):
 {prior_posts_summary or "None yet."}
-
+"""
+    if prior_content_excerpts.strip():
+        user += f"""
+Excerpts from other posts already published **this same week** (do NOT repeat themes, headings, anecdotes, or phrasing; use different angles, pests, and examples):
+---
+{prior_content_excerpts[:12000]}
+---
+"""
+    if subpost_focus.strip():
+        user += f"""
+**This article’s planned focus (stick to this angle):** {subpost_focus}
+"""
+    if role == "part" and part_number > 0:
+        user += """
+**Differentiation rules (must follow):**
+- Use a **different main title** than the series overview (not a small word change of the same headline).
+- Do **not** reuse the overview’s section heading text (e.g. if the hub says “Why Spring…”, do not use that exact phrase as an ## heading).
+- At most **one short paragraph** may restate why the weekly theme matters; the rest must be **new** detail: checklists, identification tips, timing, what to ask a pro, or mistakes to avoid for *this* focus only.
+- Prefer **different** sources or link targets than the overview when possible; at least two links may mirror the series but the *framing* must be new.
+"""
+    user += """
 Return **JSON only** with keys:
 title (string, <=90 chars),
 description (string, 120-200 chars for meta description),
@@ -64,6 +89,79 @@ body (string, markdown body without frontmatter).
 For this part article, include a brief pointer with a markdown link to the series overview: [series overview](/{hub_slug}).
 """
     return [{"role": "system", "content": system}, {"role": "user", "content": user}]
+
+
+def build_hub_week_messages(
+    *,
+    user_prompt: str,
+    rag_context: str,
+    series_title: str,
+    topic_id: str,
+    hub_slug: str,
+) -> list[dict[str, str]]:
+    """Hub post for start-week: editorial trailer + exactly 3 planned sub-article ideas (not the deep dives)."""
+    system = f"""You are a senior pest-control marketer and educator for KC Pest Experts (Kansas City metro).
+
+Write the **weekly series hub**—a **short editorial trailer**, not a full deep-dive article.
+
+**Hub role (critical):**
+- This post is the **table of contents + why it matters in 1–2 screens of reading**. The three follow-up posts will carry the heavy how-to and pest-specific detail.
+- **Do not** write long “why spring beats summer” essays with the same structure the sub-posts will use. Tease the point in a few paragraphs only; **do not** enumerate every pest category in depth (save termite/ant/rodent specifics for the numbered parts).
+- **Do not** use the same main title pattern as the follow-ups will use (avoid a title that could work as Part 1 or 2).
+- Include a section **## Coming up this week** with **exactly three** bullets. Each starts with **Coming soon:** then a short label and one sentence on the *unique* angle of that future article (non-overlapping).
+- Do not invent URLs for future posts; bullets are plain text only.
+
+**Length target:** body about **350–750 words** (not a 1,200-word pillar page).
+
+Rules:
+- Accurate, practical, non-alarmist. No guaranteed outcomes.
+- Markdown: intro, ## headings, lists. **At least 4** distinct https:// links (CDC, EPA, extension .edu, etc.) with a final ## Sources section.
+- No YAML in body. JSON only below.
+
+Context (may be incomplete):
+---
+{rag_context[:24000]}
+---
+"""
+    user = f"""Weekly theme (series): {series_title}
+Topic id: {topic_id}
+Hub slug (for internal reference only; do not link future posts): `{hub_slug}`
+
+User / editor direction:
+{user_prompt}
+
+Return **JSON only** with keys:
+title (string, <=90 chars),
+description (string, 120-200 chars),
+body (string, markdown),
+planned_subposts (array of **exactly 3** objects, each with keys: title (short working title), focus (one sentence describing the unique angle for that future article — must be **distinct** from each other)).
+"""
+    return [{"role": "system", "content": system}, {"role": "user", "content": user}]
+
+
+def generate_hub_week_json(
+    base_url: str,
+    model: str,
+    messages: list[dict[str, str]],
+    attempt: int,
+    feedback: str,
+) -> dict[str, Any]:
+    """Like generate_article_json but requires planned_subposts (3 distinct angles)."""
+    data = generate_article_json(base_url, model, messages, attempt, feedback)
+    planned = data.get("planned_subposts")
+    if not isinstance(planned, list) or len(planned) != 3:
+        raise ValueError("planned_subposts must be a list of exactly 3 objects")
+    cleaned: list[dict[str, str]] = []
+    for i, item in enumerate(planned):
+        if not isinstance(item, dict):
+            raise ValueError(f"planned_subposts[{i}] must be an object")
+        title = str(item.get("title", "")).strip()
+        focus = str(item.get("focus", "")).strip()
+        if not title or not focus:
+            raise ValueError(f"planned_subposts[{i}] needs non-empty title and focus")
+        cleaned.append({"title": title, "focus": focus})
+    data["planned_subposts"] = cleaned
+    return data
 
 
 def generate_article_json(

@@ -33,15 +33,23 @@ search:
 generation:
   max_attempts: 20
   min_quality_score: 90
-  min_words: 500
+  min_words: 450
+  # Weekly hub: shorter “trailer” (see prompts); sub-posts use min_words
+  hub_min_words: 360
+  hub_max_words: 900
   min_external_citation_links: 3
+  # Jaccard word-overlap vs prior posts in this week’s series (reject draft if above)
+  max_word_overlap_vs_series: 0.22
+  # Stricter ceiling for part 1 (overview is in prior bodies)
+  max_word_overlap_part1_vs_series: 0.26
 
-# Schedule (local timezone)
+# Schedule (America/Chicago): sub-posts run at this clock hour, on the minute tick below
 schedule:
   timezone: "America/Chicago"
-  publish_deadline_hour: 15 # No new daily post started at or after 3pm
+  publish_hour_central: 8
+  publish_minute: 13
 
-# Git / deploy (optional; disable for dry runs)
+# Git / deploy (set enabled: true when the agent should commit/push; netlify needs CLI + site link)
 publish:
   enabled: false
   git_commit: true
