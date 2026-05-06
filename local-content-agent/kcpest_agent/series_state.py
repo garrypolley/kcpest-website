@@ -189,10 +189,34 @@ def in_publish_hour(cfg: dict[str, Any], tz: str) -> bool:
     return now.hour == hour
 
 
-def at_minute_past_hour(cfg: dict[str, Any], tz: str) -> bool:
-    minute = int(cfg.get("schedule", {}).get("publish_minute", 13))
+def in_publish_minute_window(cfg: dict[str, Any], tz: str) -> bool:
+    """
+    Gate for daemon / ``run-once`` during ``publish_hour_central``.
+
+    - With ``publish_exact_minute: true`` (legacy): fires only when the clock minute
+      equals ``publish_minute``.
+    - Otherwise (default): **any minute from ``publish_minute`` through 59**
+      inside that hour, so a wakeup at ``8:17`` still runs after sleeps or drift.
+
+    Optionally set ``publish_window_end_minute`` (inclusive) to cap the end of that
+    range (still requires ``minute >= publish_minute``).
+    """
+    minute_mark = int(cfg.get("schedule", {}).get("publish_minute", 13))
     now = datetime.now(ZoneInfo(tz))
-    return now.minute == minute
+    strict = bool(cfg.get("schedule", {}).get("publish_exact_minute", False))
+    if strict:
+        return now.minute == minute_mark
+    end_raw = cfg.get("schedule", {}).get("publish_window_end_minute")
+    minute_cap = int(end_raw) if end_raw is not None else 59
+    if minute_cap < minute_mark:
+        minute_cap = minute_mark
+    return minute_mark <= now.minute <= minute_cap
+
+
+# Back-compat name used in older callers
+def at_minute_past_hour(cfg: dict[str, Any], tz: str) -> bool:
+    """Deprecated: use ``in_publish_minute_window``. Kept for external imports."""
+    return in_publish_minute_window(cfg, tz)
 
 
 def ensure_series_for_prompt(

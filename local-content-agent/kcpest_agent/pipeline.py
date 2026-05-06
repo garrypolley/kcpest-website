@@ -36,7 +36,7 @@ from kcpest_agent.series_state import (
     WeeklySeriesState,
     friday_of_previous_week,
     in_publish_hour,
-    at_minute_past_hour,
+    in_publish_minute_window,
     iso_week_topic_id_on_date,
     next_due_part,
     part_due_dates,
@@ -612,8 +612,11 @@ def run_catch_up(
         if not in_publish_hour(cfg, tz):
             print("Outside scheduled publish hour; skipping.")
             return 0
-        if not at_minute_past_hour(cfg, tz):
-            print("Not on publish minute tick; skipping.")
+        if not in_publish_minute_window(cfg, tz):
+            print(
+                "Not in publish minute window (see schedule.publish_minute "
+                "& publish_exact_minute / publish_window_end_minute); skipping.",
+            )
             return 0
     n_done = 0
     as_of = as_of or today_iso(tz)
@@ -716,8 +719,9 @@ def daemon(agent_root: Path, dry_run: bool = False) -> None:
     tz = cfg.get("schedule", {}).get("timezone", "America/Chicago")
     minute_mark = int(cfg.get("schedule", {}).get("publish_minute", 13))
     print(
-        f"Weekly-posts daemon: waking each hour at :{minute_mark:02d} "
-        f"({tz}); publish attempts only at configured morning hour.",
+        f"Weekly-posts daemon: wakes every hour at :{minute_mark:02d} ({tz}); "
+        f"sub-post generation only when local hour is {int(cfg.get('schedule', {}).get('publish_hour_central', 8))} "
+        f"and minute is in the configured window (see schedule.publish_minute / publish_exact_minute).",
         flush=True,
     )
     while True:

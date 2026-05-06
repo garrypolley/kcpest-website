@@ -43,13 +43,19 @@ generation:
   # Stricter ceiling for part 1 (overview is in prior bodies)
   max_word_overlap_part1_vs_series: 0.26
 
-# Schedule (America/Chicago): sub-posts run at this clock hour, on the minute tick below
+# Schedule (America/Chicago): sub-post attempts only during this local hour +
+# publish minute settings below.
 schedule:
   timezone: "America/Chicago"
   publish_hour_central: 8
   publish_minute: 13
+  # Omit or leave null so any minute FROM publish_minute through 59 in that hour is allowed
+  # (avoids misses from sleep jitter or heavy Ollama runs). Legacy 8:13-only: publish_exact_minute: true.
+  publish_window_end_minute: null
+  publish_exact_minute: false
 
-# Git / deploy (set enabled: true when the agent should commit/push; netlify needs CLI + site link)
+# Git / deploy — leave enabled: false unless you truly want unattended commits/pushes.
+# Tip: Netlify builds from Git are enough if GitHub is hooked up; CLI deploy is optional.
 publish:
   enabled: false
   git_commit: true
