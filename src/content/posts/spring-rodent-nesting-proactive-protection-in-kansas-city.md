@@ -1,6 +1,6 @@
 ---
 title: "Spring Rodent Nesting: Proactive Protection in Kansas City"
-description: "Rodents establish their winter nests in the spring \u2013 a critical window for proactive pest control. Learn how to identify nesting behaviors, seal entry points, and utilize targeted trapping strategies to protect your Kansas City home before infestations take hold. [series overview](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)"
+description: "Rodents establish their winter nests in the spring \u2013 a critical window for proactive pest control. Learn how to identify nesting behaviors, seal entry points, and utilize targeted trapping strategies to protect your Kansas City home before infestations take hold."
 pubDate: 2026-04-20
 author: "KC Pest Experts"
 seriesTopicId: "2026-W16-create-an-article-about-why-starting-pest-contro"
@@ -45,12 +45,12 @@ While DIY measures can be effective, a professional pest control service offers 
 
 ## This week’s series
 
-This piece is part of our series **Create an article about why starting pest control treatment right now in the spring is necessary and better than waiting until later in the summer**. Start with the [series overview](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr).
+This piece is part of our series **Create an article about why starting pest control treatment right now in the spring is necessary and better than waiting until later in the summer**. Start with the [series overview](/pest-control-blog/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr).
 
 **Articles in this series:**
 
-- [Spring's Advantage: Protecting Your Home Now](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
-- [Kansas Ants: Spring Scouting – A Targeted Approach](/kansas-ants-spring-scouting-a-targeted-approach)
+- [Spring's Advantage: Protecting Your Home Now](/pest-control-blog/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
+- [Kansas Ants: Spring Scouting – A Targeted Approach](/pest-control-blog/kansas-ants-spring-scouting-a-targeted-approach)
 - Spring Rodent Nesting: Proactive Protection in Kansas City *(this article)*
-- **Coming soon:** Spring Termite Threats: Proactive Protection in Kansas City
+- [Spring Termite Threats: Proactive Protection in Kansas City](/pest-control-blog/spring-termite-threats-proactive-protection-in-kansas-city)
 

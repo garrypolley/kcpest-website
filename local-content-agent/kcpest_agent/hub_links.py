@@ -9,6 +9,14 @@ MARK_BEGIN = "<!-- kcpest-series:begin -->"
 MARK_END = "<!-- kcpest-series:end -->"
 
 
+def blog_post_url(slug: str) -> str:
+    """Canonical in-content path for posts (matches /pest-control-blog listing; also available at root /{slug})."""
+    s = slug.strip().lstrip("/")
+    if not s:
+        return "/pest-control-blog/"
+    return f"/pest-control-blog/{s}"
+
+
 def render_series_block(
     hub_slug: str,
     series_title: str,
@@ -16,7 +24,7 @@ def render_series_block(
     siblings: list[tuple[str, str, str]],  # (title, slug, published_on YYYY-MM-DD)
     current_slug: str,
 ) -> str:
-    hub_url = f"/{hub_slug}"
+    hub_url = blog_post_url(hub_slug)
     lines = [
         "## This week’s series",
         "",
@@ -30,7 +38,7 @@ def render_series_block(
             if slug == current_slug:
                 lines.append(f"- {title} *(this article)*")
             elif is_schedule_day_public_central(published_on):
-                lines.append(f"- [{title}](/{slug})")
+                lines.append(f"- [{title}]({blog_post_url(slug)})")
             else:
                 lines.append(f"- **Coming soon:** {title}")
         lines.append("")
@@ -59,7 +67,7 @@ def upsert_hub_series_section(
     ]
     for title, slug, published_on in entries:
         if is_schedule_day_public_central(published_on):
-            block_lines.append(f"- [{title}](/{slug})")
+            block_lines.append(f"- [{title}]({blog_post_url(slug)})")
         else:
             block_lines.append(f"- **Coming soon:** {title}")
     block_lines.extend(["", MARK_END, ""])

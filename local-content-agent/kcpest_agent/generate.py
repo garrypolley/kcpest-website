@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from typing import Any
 
+from kcpest_agent.hub_links import blog_post_url
 from kcpest_agent.internal_links import INTERNAL_SERVICE_CTA_BLOCK
 from kcpest_agent.ollama_client import chat, parse_json_loose
 
@@ -88,7 +89,7 @@ body (string, markdown body without frontmatter).
 """
     if part_number > 0 and hub_slug:
         user += f"""
-For this part article, include a brief pointer with a markdown link to the series overview: [series overview](/{hub_slug}).
+For this part article, include a brief pointer with a markdown link to the series overview: [series overview]({blog_post_url(hub_slug)}).
 """
     return [{"role": "system", "content": system}, {"role": "user", "content": user}]
 

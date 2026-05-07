@@ -29,7 +29,7 @@ Ants are actively scouting for new food sources and nesting sites in the spring.
 
 Waiting until summer to address ant infestations significantly increases the challenge. By then, colonies will be larger, more established, and more resistant to treatments. A proactive spring approach is significantly more effective and cost-effective in the long run. 
 
-[series overview](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
+[series overview](/pest-control-blog/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
 
 ## Resources for More Information
 *   **CDC - Pest Control:** [https://www.cdc.gov/nceh/ehs/pestcontrol/](https://www.cdc.gov/nceh/ehs/pestcontrol/)
@@ -41,12 +41,12 @@ Waiting until summer to address ant infestations significantly increases the cha
 
 ## This week’s series
 
-This piece is part of our series **Create an article about why starting pest control treatment right now in the spring is necessary and better than waiting until later in the summer**. Start with the [series overview](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr).
+This piece is part of our series **Create an article about why starting pest control treatment right now in the spring is necessary and better than waiting until later in the summer**. Start with the [series overview](/pest-control-blog/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr).
 
 **Articles in this series:**
 
-- [Spring's Advantage: Protecting Your Home Now](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
+- [Spring's Advantage: Protecting Your Home Now](/pest-control-blog/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
 - Kansas Ants: Spring Scouting – A Targeted Approach *(this article)*
-- [Spring Rodent Nesting: Proactive Protection in Kansas City](/spring-rodent-nesting-proactive-protection-in-kansas-city)
-- **Coming soon:** Spring Termite Threats: Proactive Protection in Kansas City
+- [Spring Rodent Nesting: Proactive Protection in Kansas City](/pest-control-blog/spring-rodent-nesting-proactive-protection-in-kansas-city)
+- [Spring Termite Threats: Proactive Protection in Kansas City](/pest-control-blog/spring-termite-threats-proactive-protection-in-kansas-city)
 

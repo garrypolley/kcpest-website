@@ -34,18 +34,18 @@ Starting termite protection in the spring focuses on disrupting the termite’s 
 
 **Don’t Delay – Schedule a Professional Inspection** Early detection is key. KC Pest Experts can provide a comprehensive termite inspection and recommend the most effective treatment options for your specific situation. [KC Pest Experts - termite control](/pest-and-wildlife-services/termite-control-service) – Contact us today for a free estimate!
 
-[series overview](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
+[series overview](/pest-control-blog/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
 
 ---
 
 ## This week’s series
 
-This piece is part of our series **Create an article about why starting pest control treatment right now in the spring is necessary and better than waiting until later in the summer**. Start with the [series overview](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr).
+This piece is part of our series **Create an article about why starting pest control treatment right now in the spring is necessary and better than waiting until later in the summer**. Start with the [series overview](/pest-control-blog/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr).
 
 **Articles in this series:**
 
-- [Spring's Advantage: Protecting Your Home Now](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
-- [Kansas Ants: Spring Scouting – A Targeted Approach](/kansas-ants-spring-scouting-a-targeted-approach)
-- [Spring Rodent Nesting: Proactive Protection in Kansas City](/spring-rodent-nesting-proactive-protection-in-kansas-city)
+- [Spring's Advantage: Protecting Your Home Now](/pest-control-blog/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
+- [Kansas Ants: Spring Scouting – A Targeted Approach](/pest-control-blog/kansas-ants-spring-scouting-a-targeted-approach)
+- [Spring Rodent Nesting: Proactive Protection in Kansas City](/pest-control-blog/spring-rodent-nesting-proactive-protection-in-kansas-city)
 - Spring Termite Threats: Proactive Protection in Kansas City *(this article)*
 

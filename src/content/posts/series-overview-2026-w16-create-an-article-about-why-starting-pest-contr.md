@@ -40,10 +40,10 @@ Starting pest control isn’t just about treatment; it’s about prevention. Spr
 
 _Create an article about why starting pest control treatment right now in the spring is necessary and better than waiting until later in the summer_
 
-- [Spring's Advantage: Protecting Your Home Now](/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
-- [Kansas Ants: Spring Scouting – A Targeted Approach](/kansas-ants-spring-scouting-a-targeted-approach)
-- [Spring Rodent Nesting: Proactive Protection in Kansas City](/spring-rodent-nesting-proactive-protection-in-kansas-city)
-- **Coming soon:** Spring Termite Threats: Proactive Protection in Kansas City
+- [Spring's Advantage: Protecting Your Home Now](/pest-control-blog/series-overview-2026-w16-create-an-article-about-why-starting-pest-contr)
+- [Kansas Ants: Spring Scouting – A Targeted Approach](/pest-control-blog/kansas-ants-spring-scouting-a-targeted-approach)
+- [Spring Rodent Nesting: Proactive Protection in Kansas City](/pest-control-blog/spring-rodent-nesting-proactive-protection-in-kansas-city)
+- [Spring Termite Threats: Proactive Protection in Kansas City](/pest-control-blog/spring-termite-threats-proactive-protection-in-kansas-city)
 
 <!-- kcpest-series:end -->
 
