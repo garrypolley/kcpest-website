@@ -27,7 +27,7 @@ At KC Pest Experts, we understand the complexities of pest control and the impor
 *   **Wildlife Control Services:** Addressing wildlife intrusions and damage.
 *   **Attic Disinfectant & Insulation Cleanup:** Removing pest infestations and restoring air quality in attics and crawlspaces.
 
-Don’t wait for a health crisis to take action. Schedule a comprehensive inspection with KC Pest Experts today to assess your property’s risk and develop a tailored pest control plan. Contact us at [/pest-control-service#request-form](tel:). 
+Don’t wait for a health crisis to take action. Schedule a comprehensive inspection with **KC Pest Experts** today to assess your property’s risk and develop a tailored pest control plan. [Request service or contact us](/pest-control-service#request-form). 
 
 ## Coming up this week
 *   **Coming soon:** Rodent-Specific Threat Assessment – We’ll dive deeper into the common rodent species in the Kansas City metro and how their behavior impacts your home’s vulnerability.
