@@ -45,6 +45,7 @@ Don’t wait for a health crisis to take action. Schedule a comprehensive inspec
 _News tie-in: AP Story https://apnews.com/article/hantavirus-cruise-ship-st-helena-9c70878b2ff59d187f1e34c12627cea7 (hantavirus, rodents). Discuss why indoor air_
 
 - [Protect Your Home: Air Quality & Pest Risk](/pest-control-blog/series-overview-2026-w19-news-tie-in-ap-story-https-apnews-com-article-h)
+- [Hidden Hazards: Rodents & Your Kansas City Air](/pest-control-blog/hidden-hazards-rodents-your-kansas-city-air)
 
 <!-- kcpest-series:end -->
 
