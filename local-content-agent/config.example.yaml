@@ -38,6 +38,11 @@ generation:
   hub_min_words: 360
   hub_max_words: 900
   min_external_citation_links: 3
+  # Fetch each citation (HEAD then GET fallback). Fails heuristic if any URL 404s, times out, or raises TLS/socket errors.
+  verify_external_urls: true
+  url_check_timeout_seconds: 18
+  url_check_pause_seconds: 0.25
+  # url_check_user_agent: "Mozilla/5.0 ..." # optional override
   # Jaccard word-overlap vs prior posts in this week’s series (reject draft if above)
   max_word_overlap_vs_series: 0.22
   # Parts 2–3 vs hub + prior parts (shared topic words); loosen if generation keeps hitting dedup

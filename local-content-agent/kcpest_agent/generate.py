@@ -84,7 +84,7 @@ def build_messages(
 Rules:
 - Accurate, practical, non-alarmist. No guaranteed outcomes. No medical advice; suggest consulting professionals for health concerns.
 - Use markdown: start body with an intro paragraph, then use ## and ### headings, bullet lists where helpful.
-- Include **at least 4** distinct markdown links to authoritative sources (HTTPS) such as CDC, EPA, USDA, or university extension (.edu). Inline citations like [CDC topic](url).
+- Include **at least 4** distinct markdown links to authoritative sources (HTTPS) such as CDC, EPA, USDA, or university extension (.edu). Inline citations like [CDC topic](url). **URLs must already exist:** do not invent paths; incorrect links cause the draft to be rejected automatically.
 - Add a final ## Sources section listing the same links with one-line descriptions.
 {INTERNAL_SERVICE_CTA_BLOCK}
 - Local angle: mention Kansas City region where natural (outdoor pests, seasonal timing)—avoid fabricating statistics.
@@ -165,7 +165,7 @@ Write the **weekly series hub**—a **short editorial trailer**, not a full deep
 
 Rules:
 - Accurate, practical, non-alarmist. No guaranteed outcomes.
-- Markdown: intro, ## headings, lists. **At least 4** distinct https:// links (CDC, EPA, extension .edu, etc.) with a final ## Sources section.
+- Markdown: intro, ## headings, lists. **At least 4** distinct https:// links (CDC, EPA, extension .edu, etc.) with a final ## Sources section. **Each URL must resolve (no guessing paths).**
 - No YAML in body. JSON only below.
 - Never include GenOutput / LastGenOutput, stray `}}` chains, ```json fences, or any JSON-structure text inside `body`; prose ends at normal punctuation only.
 

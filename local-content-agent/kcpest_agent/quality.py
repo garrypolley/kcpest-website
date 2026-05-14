@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 import re
-from pathlib import Path
 from typing import Any
 
 from kcpest_agent.generate import body_artefact_issues
+from kcpest_agent.link_health import external_citation_issues
 from kcpest_agent.ollama_client import chat, parse_json_loose
 
 
@@ -43,6 +43,7 @@ def heuristic_score(
     min_words: int,
     min_links: int,
     build_ok: bool,
+    gen_cfg: dict[str, Any] | None = None,
 ) -> tuple[float, list[str]]:
     issues: list[str] = []
     score = 0.0
@@ -95,6 +96,13 @@ def heuristic_score(
     ba = body_artefact_issues(body)
     if ba:
         issues.extend(ba)
+        score = min(score, 35.0)
+
+    lei = external_citation_issues(body, gen_cfg)
+    if lei:
+        issues.extend(lei[:25])
+        if len(lei) > 25:
+            issues.append(f"... and {len(lei) - 25} more bad citation URL(s)")
         score = min(score, 35.0)
 
     return min(100.0, score), issues

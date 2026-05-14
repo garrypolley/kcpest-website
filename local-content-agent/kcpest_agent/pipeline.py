@@ -188,7 +188,7 @@ def start_week(
     chat_model = ollama.get("chat_model", "llama3.2")
     embed_model = ollama.get("embed_model") or None
 
-    gen_cfg = cfg.get("generation", {})
+    gen_cfg = cfg.get("generation") or {}
     max_attempts = int(gen_cfg.get("max_attempts", 20))
     min_q = float(gen_cfg.get("min_quality_score", 90))
     min_words = int(gen_cfg.get("min_words", 500))
@@ -279,6 +279,7 @@ def start_week(
             min_words=hub_min_words,
             min_links=min_links,
             build_ok=True,
+            gen_cfg=gen_cfg,
         )
         llm_s, llm_notes = llm_quality_score(base_url, chat_model, md_read)
         overall = combined_score(h_score, llm_s, True)
@@ -388,7 +389,7 @@ def _try_publish_subpost(
     chat_model = ollama.get("chat_model", "llama3.2")
     embed_model = ollama.get("embed_model") or None
 
-    gen_cfg = cfg.get("generation", {})
+    gen_cfg = cfg.get("generation") or {}
     max_attempts = int(gen_cfg.get("max_attempts", 20))
     min_q = float(gen_cfg.get("min_quality_score", 90))
     min_words = int(gen_cfg.get("min_words", 500))
@@ -516,6 +517,7 @@ def _try_publish_subpost(
             min_words=min_words,
             min_links=min_links,
             build_ok=True,
+            gen_cfg=gen_cfg,
         )
         llm_s, llm_notes = llm_quality_score(base_url, chat_model, md_read)
         overall = combined_score(h_score, llm_s, True)
