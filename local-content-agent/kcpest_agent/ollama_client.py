@@ -74,9 +74,63 @@ def cosine_sim(a: list[float], b: list[float]) -> float:
     return dot / (na * nb)
 
 
+def repair_json_control_chars_in_strings(s: str) -> str:
+    """Escape raw newlines / strip ASCII controls inside JSON string literals so ``json.loads`` works."""
+    out: list[str] = []
+    i = 0
+    in_str = False
+    escape = False
+    while i < len(s):
+        ch = s[i]
+        if escape:
+            out.append(ch)
+            escape = False
+            i += 1
+            continue
+        if ch == "\\":
+            out.append(ch)
+            escape = True
+            i += 1
+            continue
+        if ch == '"':
+            in_str = not in_str
+            out.append(ch)
+            i += 1
+            continue
+        if in_str:
+            if ch == "\r":
+                out.append("\\n")
+                if i + 1 < len(s) and s[i + 1] == "\n":
+                    i += 2
+                else:
+                    i += 1
+                continue
+            if ch == "\n":
+                out.append("\\n")
+                i += 1
+                continue
+            if ord(ch) < 32 and ch != "\t":
+                out.append(" ")
+                i += 1
+                continue
+        out.append(ch)
+        i += 1
+    return "".join(out)
+
+
 def parse_json_loose(text: str) -> dict[str, Any]:
     text = text.strip()
     m = re.search(r"\{[\s\S]*\}", text)
     if m:
         text = m.group(0)
-    return json.loads(text)
+    candidates = [text, repair_json_control_chars_in_strings(text)]
+    last_err: json.JSONDecodeError | None = None
+    for cand in candidates:
+        try:
+            return json.loads(cand)
+        except json.JSONDecodeError as exc:
+            last_err = exc
+            continue
+    if last_err:
+        raise last_err
+    raise json.JSONDecodeError("empty JSON candidate", text, 0)

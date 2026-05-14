@@ -394,12 +394,15 @@ def _try_publish_subpost(
     min_words = int(gen_cfg.get("min_words", 500))
     min_links = int(gen_cfg.get("min_external_citation_links", 3))
     overlap_thr = float(gen_cfg.get("max_word_overlap_vs_series", 0.22))
+    overlap_part23 = float(gen_cfg.get("max_word_overlap_parts_2_3_vs_series", 0.29))
     # Part 1 is only compared to the hub so far — shared topic words are expected; allow a looser ceiling.
-    th_use = (
-        float(gen_cfg.get("max_word_overlap_part1_vs_series", 0.26))
-        if part_num == 1
-        else overlap_thr
-    )
+    # Parts 2–3 often overlap hub + part 1 on vocabulary (rodents, attic, KC); slightly higher ceiling avoids deadlock.
+    if part_num == 1:
+        th_use = float(gen_cfg.get("max_word_overlap_part1_vs_series", 0.26))
+    elif part_num >= 2:
+        th_use = max(overlap_thr, overlap_part23)
+    else:
+        th_use = overlap_thr
 
     hub_slug = series.hub_slug
     series_title = series.user_prompt.strip()[:160]

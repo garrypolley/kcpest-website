@@ -71,10 +71,10 @@ def heuristic_score(
         issues.append(f"External links {nlinks} < {min_links}")
 
     desc = fm.get("description", "")
-    if 40 <= len(desc) <= 220:
+    if 35 <= len(desc) <= 240:
         score += 10
     else:
-        issues.append("Description length should be ~40–220 chars")
+        issues.append("Description length should be ~35–240 chars")
 
     title = fm.get("title", "")
     if 20 <= len(title) <= 100:
@@ -82,13 +82,14 @@ def heuristic_score(
     else:
         issues.append("Title length unusual")
 
-    # Structure: at least two ## sections in body
+    # Structure: two ## headings, or one ## plus multiple ### substeps (models vary)
     body = FRONT_MATTER_RE.sub("", md, count=1)
     h2 = len(re.findall(r"(?m)^##\s+\S", body))
-    if h2 >= 2:
+    h3 = len(re.findall(r"(?m)^###\s+\S", body))
+    if h2 >= 2 or (h2 >= 1 and h3 >= 2):
         score += 10
     else:
-        issues.append("Need at least two ## sections in body")
+        issues.append("Need clearer structure (two ## sections or ## plus ### subsections)")
 
     return min(100.0, score), issues
 

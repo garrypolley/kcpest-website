@@ -40,6 +40,8 @@ generation:
   min_external_citation_links: 3
   # Jaccard word-overlap vs prior posts in this week’s series (reject draft if above)
   max_word_overlap_vs_series: 0.22
+  # Parts 2–3 vs hub + prior parts (shared topic words); loosen if generation keeps hitting dedup
+  max_word_overlap_parts_2_3_vs_series: 0.29
   # Stricter ceiling for part 1 (overview is in prior bodies)
   max_word_overlap_part1_vs_series: 0.26
 

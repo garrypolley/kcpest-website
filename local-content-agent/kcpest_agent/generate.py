@@ -184,7 +184,14 @@ def generate_article_json(
         "role": "user",
         "content": msgs[-1]["content"] + extra,
     }
-    raw = chat(base_url, model, msgs, temperature=0.35 + min(0.1 * attempt, 0.25), timeout=600)
+    raw = chat(
+        base_url,
+        model,
+        msgs,
+        temperature=0.35 + min(0.1 * attempt, 0.25),
+        timeout=600,
+        format_json=True,
+    )
     try:
         data = parse_json_loose(raw)
     except json.JSONDecodeError:
