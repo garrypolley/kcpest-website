@@ -78,6 +78,6 @@ The Evolution of Bedbug Control
 
 Continuing education and staying updated on new products and methods are crucial in effectively controlling bedbugs.
 
-Conclusion ﻿
+Conclusion 
 
 Bedbugs are a serious problem requiring professional solutions. At KC Pest Experts, we're committed to helping our region eliminate these parasites.

@@ -21,10 +21,19 @@ _TAIL_JSON_LEAK_SIMPLE = re.compile(
 
 def sanitize_article_body(body: str) -> str:
     """Remove known LLM/metadata tails accidentally concatenated onto markdown body."""
-    t = body.strip()
-    for _ in range(6):
-        t2 = _TAIL_JSON_LEAK.sub("", t).rstrip()
-        t2 = _TAIL_JSON_LEAK_SIMPLE.sub("", t2).rstrip()
+    t = body.replace("\ufeff", "")
+    # Do not strip newlines globally — drafts rely on trailing newlines before EOF.
+    while t.endswith("\r"):
+        t = t[:-1]
+    for _ in range(8):
+        t2 = _TAIL_JSON_LEAK.sub("", t)
+        t2 = _TAIL_JSON_LEAK_SIMPLE.sub("", t2)
+        # Spaces/tabs the leak leaves on the last real prose line — never strip \n bytes
+        t2_end = len(t2)
+        while t2_end > 0 and t2[t2_end - 1] in " \t":
+            t2_end -= 1
+        if t2_end < len(t2):
+            t2 = t2[:t2_end]
         if t2 == t:
             break
         t = t2
