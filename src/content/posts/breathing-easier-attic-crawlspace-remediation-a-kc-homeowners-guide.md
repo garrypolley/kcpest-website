@@ -37,7 +37,7 @@ Before commencing any work, a thorough assessment is crucial. This isn’t just 
 *   [CDC – Hantavirus](https://www.cdc.gov/hantavirus/index.html)
 *   [EPA – Pest Management](https://www.epa.gov/pested/pest-management)
 *   [USDA National Agricultural Library – Rodent Identification](https://www.nal.usda.gov/nic/rodent-identification)
-*   [Kansas City Missouri – Building Codes](https://www.kcmo.gov/government/departments/planning-development/building-codes) – Ensure proper ventilation and construction standards.”}LastGenOutput:
+*   [Kansas City Missouri – Building Codes](https://www.kcmo.gov/government/departments/planning-development/building-codes) – Ensure proper ventilation and construction standards per local ordinances where applicable.
 
 ---
 

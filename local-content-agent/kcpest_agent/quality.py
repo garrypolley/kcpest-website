@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 from typing import Any
 
+from kcpest_agent.generate import body_artefact_issues
 from kcpest_agent.ollama_client import chat, parse_json_loose
 
 
@@ -90,6 +91,11 @@ def heuristic_score(
         score += 10
     else:
         issues.append("Need clearer structure (two ## sections or ## plus ### subsections)")
+
+    ba = body_artefact_issues(body)
+    if ba:
+        issues.extend(ba)
+        score = min(score, 35.0)
 
     return min(100.0, score), issues
 

@@ -1,11 +1,46 @@
 from __future__ import annotations
 
 import json
+import re
 from typing import Any
 
 from kcpest_agent.hub_links import blog_post_url
 from kcpest_agent.internal_links import INTERNAL_SERVICE_CTA_BLOCK
 from kcpest_agent.ollama_client import chat, parse_json_loose
+
+# Truncated responses sometimes glue JSON/control tokens onto the prose body (e.g. …"}LastGenOutput:).
+_TAIL_JSON_LEAK = re.compile(
+    r'''[\u201c\u201d"]\s*\}\s*(?:Last)?GenOutput\b.*\Z''',
+    re.IGNORECASE | re.DOTALL,
+)
+_TAIL_JSON_LEAK_SIMPLE = re.compile(
+    r'''\}\s*(?:Last)?GenOutput\b.*\Z''',
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+def sanitize_article_body(body: str) -> str:
+    """Remove known LLM/metadata tails accidentally concatenated onto markdown body."""
+    t = body.strip()
+    for _ in range(6):
+        t2 = _TAIL_JSON_LEAK.sub("", t).rstrip()
+        t2 = _TAIL_JSON_LEAK_SIMPLE.sub("", t2).rstrip()
+        if t2 == t:
+            break
+        t = t2
+    return t
+
+
+def body_artefact_issues(body: str) -> list[str]:
+    """Return human-readable QA issues when tooling/JSON garbage remains in prose."""
+    if not body.strip():
+        return []
+    issues: list[str] = []
+    if re.search(r"\b(?:last|previous)?genoutput\b", body, re.IGNORECASE):
+        issues.append("Body contains tooling token (GenOutput / LastGenOutput — never allowed in prose)")
+    if "```json" in body.lower():
+        issues.append("Body contains fenced ```json (should never appear in prose)")
+    return issues
 
 
 def build_messages(
@@ -45,6 +80,7 @@ Rules:
 {INTERNAL_SERVICE_CTA_BLOCK}
 - Local angle: mention Kansas City region where natural (outdoor pests, seasonal timing)—avoid fabricating statistics.
 - Do NOT include YAML frontmatter in the body; JSON only below.
+- Never append JSON fragments, curly braces paired with stray quotes, or tokens like GenOutput / LastGenOutput / thought: anywhere in the prose.
 
 Context snippets (may be incomplete; verify tone only):
 ---
@@ -122,6 +158,7 @@ Rules:
 - Accurate, practical, non-alarmist. No guaranteed outcomes.
 - Markdown: intro, ## headings, lists. **At least 4** distinct https:// links (CDC, EPA, extension .edu, etc.) with a final ## Sources section.
 - No YAML in body. JSON only below.
+- Never include GenOutput / LastGenOutput, stray `}}` chains, ```json fences, or any JSON-structure text inside `body`; prose ends at normal punctuation only.
 
 Context (may be incomplete):
 ---
@@ -212,6 +249,11 @@ def generate_article_json(
     for k in ("title", "description", "body"):
         if k not in data:
             raise ValueError(f"Missing {k} in model output")
+    data["title"] = str(data["title"]).strip()
+    data["description"] = str(data["description"]).strip()
+    data["body"] = sanitize_article_body(str(data["body"]))
+    if body_artefact_issues(str(data["body"])):
+        raise ValueError("Body contained tooling/JSON artefacts after sanitize; regenerate")
     return data
 
 
