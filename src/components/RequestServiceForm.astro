@@ -18,9 +18,14 @@ const formAction = useExternalEndpoint ? formEndpoint : "/thank-you";
       name="service-request"
       method="POST"
       action={formAction}
-      data-netlify={useExternalEndpoint ? undefined : "true"}
-      netlify-honeypot={useExternalEndpoint ? undefined : "bot-field"}
       class="mt-6 grid gap-4 md:grid-cols-2"
+      {...(useExternalEndpoint
+        ? {}
+        : {
+            "data-netlify": "true",
+            netlify: true,
+            "netlify-honeypot": "bot-field",
+          })}
     >
       <input type="hidden" name="form-name" value="service-request" />
       <p class="hidden">
