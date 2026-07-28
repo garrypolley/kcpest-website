@@ -2,19 +2,18 @@
 /**
  * Official raster lockup (178×52 WebP from CDN, mirrored locally).
  */
-import OptimizedImage from "./OptimizedImage.astro";
-
 const LOGO_SRC = "/images/brand/kc-pest-header-logo.webp";
 const LOGO_W = 178;
 const LOGO_H = 52;
 ---
 
-<OptimizedImage
+<img
   src={LOGO_SRC}
   alt=""
   width={LOGO_W}
   height={LOGO_H}
   class="h-12 w-auto shrink-0"
   loading="eager"
-  fetchpriority="high"
+  decoding="async"
+  aria-hidden="true"
 />
