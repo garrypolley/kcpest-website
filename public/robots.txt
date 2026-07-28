@@ -4,4 +4,4 @@ Allow: /
 Disallow: /admin
 Disallow: /thank-you
 
-Sitemap: https://kcpest-website.garrypolley.com/sitemap-index.xml
+Sitemap: https://kcpestexperts.com/sitemap-index.xml

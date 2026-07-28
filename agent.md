@@ -20,7 +20,7 @@
 - Production release step used in this project: manual CLI deploy after push:
   - `netlify deploy --prod --build`
 - Verify deployment by checking:
-  - Production URL: `https://kcpest-website.garrypolley.com`
+  - Production URL: `https://kcpestexperts.com`
   - Netlify deploy logs for the latest deploy ID.
 
 ## Conventions from this project

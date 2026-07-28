@@ -4,7 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "22"
-  PUBLIC_SITE_URL = "https://kcpest-website.garrypolley.com"
+  PUBLIC_SITE_URL = "https://kcpestexperts.com"
 
 [[redirects]]
   from = "/local-pest-control-experts"

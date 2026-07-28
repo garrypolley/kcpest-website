@@ -6,8 +6,8 @@ backend:
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
-site_url: "https://kcpest-website.garrypolley.com"
-display_url: "https://kcpest-website.garrypolley.com"
+site_url: "https://kcpestexperts.com"
+display_url: "https://kcpestexperts.com"
 
 collections:
   - name: "pages"

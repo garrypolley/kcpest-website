@@ -22,7 +22,7 @@ const {
   noindex = false,
 } = Astro.props;
 
-const siteUrl = Astro.site ?? new URL("https://kcpest-website.garrypolley.com");
+const siteUrl = Astro.site ?? new URL("https://kcpestexperts.com");
 const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, siteUrl).toString();
 const ogImageUrl = new URL(ogImage, siteUrl).toString();
 const robots = noindex ? "noindex, nofollow" : "index, follow";
