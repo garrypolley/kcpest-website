@@ -59,3 +59,21 @@
   to = "/pest-and-wildlife-services/carpenter-ants-pest-control"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/pest-control-service"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/pest-control-service"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap-index.xml"
+  status = 301
+  force = true

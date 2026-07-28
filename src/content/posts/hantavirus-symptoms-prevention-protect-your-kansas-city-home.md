@@ -23,7 +23,7 @@ Protecting your home from hantavirus and other rodent-borne illnesses starts wit
 
 **Important Note:** Disturbing rodent droppings or nesting materials can aerosolize pathogens. Always prioritize safety and follow recommended precautions.  For a detailed guide on attic and crawlspace remediation in Kansas City, see our previous article: [Breathing Easier: Attic & Crawlspace Remediation – A KC Homeowner’s Guide](/pest-control-blog/breathing-easier-attic-crawlspace-remediation-kc-homeowner-s-guide).
 
-Contact KC Pest Experts today for a free consultation and protect your family's health! [KC Pest Experts - Contact Us](/contact-us)
+Contact KC Pest Experts today for a free consultation and protect your family's health! [KC Pest Experts - Contact Us](/pest-control-service#request-form)
 
 ---
 

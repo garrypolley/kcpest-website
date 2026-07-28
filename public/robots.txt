@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin
+Disallow: /thank-you
+
+Sitemap: https://kcpest-website.garrypolley.com/sitemap-index.xml
