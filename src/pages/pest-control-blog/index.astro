@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import OptimizedImage from "../../components/OptimizedImage.astro";
 import { isPostPublicByPubDate } from "../../lib/postVisibility";
 
 const posts = (await getCollection("posts"))
@@ -32,11 +33,15 @@ const formatPubDate = (date: Date) =>
             {
               post.data.coverImage && (
                 <div class="mb-4 overflow-hidden rounded-xl border border-brand-blue/10 bg-slate-100">
-                  <img
+                  <OptimizedImage
                     src={post.data.coverImage}
                     alt={post.data.coverAlt ?? `${post.data.title} preview`}
+                    width={800}
+                    height={320}
                     class="h-40 w-full object-cover"
                     loading="lazy"
+                    widths={[400, 800]}
+                    sizes="(min-width: 768px) 800px, 100vw"
                   />
                 </div>
               )

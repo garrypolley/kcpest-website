@@ -1,0 +1,44 @@
+---
+import { netlifyImageUrl } from "../lib/siteImages";
+
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  class?: string;
+  loading?: "lazy" | "eager";
+  fetchpriority?: "high" | "low" | "auto";
+  widths?: number[];
+  sizes?: string;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  class: className,
+  loading = "lazy",
+  fetchpriority,
+  widths = [Math.round(width / 2), width],
+  sizes = "100vw",
+} = Astro.props;
+
+const uniqueWidths = [...new Set(widths.filter((w) => w > 0))].sort((a, b) => a - b);
+const srcset = uniqueWidths.map((w) => `${netlifyImageUrl(src, w)} ${w}w`).join(", ");
+const primary = netlifyImageUrl(src, width);
+---
+
+<img
+  src={primary}
+  srcset={srcset}
+  sizes={sizes}
+  alt={alt}
+  width={width}
+  height={height}
+  class={className}
+  loading={loading}
+  fetchpriority={fetchpriority}
+  decoding="async"
+/>
