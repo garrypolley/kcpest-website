@@ -18,5 +18,6 @@ Our service team handles both active infestations and prevention plans, with pra
 - Carpenter ant treatments
 - Wildlife control services (including bats and raccoons)
 - Attic disinfectant, deodorizing, and insulation cleanup after contamination
+- Boat dock pest control for lake properties and marinas
 
 If you are unsure which service applies to your situation, submit a request and describe what you are seeing. We will recommend the right next step.
