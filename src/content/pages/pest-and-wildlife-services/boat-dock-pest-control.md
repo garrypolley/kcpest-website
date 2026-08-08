@@ -2,7 +2,7 @@
 title: "Boat Dock Pest Control | Kansas City, MO | KC Pest Experts"
 description: "Boat dock pest control for Kansas City metro and Jackson County lake properties, with inspection, targeted treatment, and practical prevention planning."
 previewImage: "/images/services/boat-dock.webp"
-previewAlt: "Wooden boat dock on a Midwest lake ready for pest control service"
+previewAlt: "Private wooden boat dock with covered slip extending over a lake"
 navLabel: "Boat Dock Pest Control"
 isService: true
 order: 100
@@ -33,3 +33,5 @@ We inspect active pest pressure on and around the dock, clear webs and nest site
 - Droppings, gnaw marks, or nesting material near the dock or boat cover
 
 If you are seeing dock pests or want a seasonal plan before peak activity, request service and describe your property type and location.
+
+*Photo: [Private boat dock on Lake Bruin](https://commons.wikimedia.org/wiki/File:Private_boat_dock_on_Lake_Bruin_IMG_7481_1.jpg) by Billy Hathorn, [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).*
