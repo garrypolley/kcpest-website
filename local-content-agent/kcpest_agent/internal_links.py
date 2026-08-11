@@ -19,11 +19,11 @@ INTERNAL_SERVICE_CTA_BLOCK = """
 - Wildlife: [/pest-and-wildlife-services/wildlife-control-services](/pest-and-wildlife-services/wildlife-control-services)
 - Attic & insulation cleanup: [/pest-and-wildlife-services/attic-disinfectant-insulation-cleanup](/pest-and-wildlife-services/attic-disinfectant-insulation-cleanup)
 - Request service / contact: [/pest-control-service#request-form](/pest-control-service#request-form)
-Do not use kcpext.com, kcpext, or any `https://` URL for our own site except real external authority links (CDC, EPA, .edu) in ## Sources."""
+Do not use kcpext.com, kcpextra.com, kcpext, or any `https://` URL for our own site except real external authority links (CDC, EPA, .edu) in ## Sources."""
 
 
 _KCPEXT_URL_RE = re.compile(
-    r"https?://(?:www\.)?kcpext\.com[^\s)]+",
+    r"https?://(?:www\.)?(?:kcpext|kcpextra)\.com[^\s)]+",
     re.IGNORECASE,
 )
 

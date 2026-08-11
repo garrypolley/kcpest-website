@@ -1,40 +1,46 @@
 ---
 title: "Bat Exclusion in the KC Metro: Schools & Your Home"
-description: "Bats are a common Midwest problem \u2013 especially in older buildings. Discover the complexities of bat exclusion for Kansas City homeowners and property managers. Learn how to protect your property and health."
+description: "Bats are a common Midwest problem in older buildings. Learn why exclusion is complex for Kansas City homeowners, with lessons from recent Kansas school bat cases."
 pubDate: 2026-08-10
 author: "KC Pest Experts"
 seriesTopicId: "2026-W33-news-tied-kansas-city-midwest-series-on-bat-excl"
 seriesHubSlug: "series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc"
 seriesPart: 0
-seriesTitle: "News-tied Kansas City / Midwest series on bat exclusion complexity for homeowners and property managers.\n\nMust cite this news story as an external https link: h"
+seriesTitle: "Bat Exclusion Complexity in the Midwest"
 ---
-# Bat Exclusion in the KC Metro: Schools & Your Home
 
-Bats are a surprisingly frequent visitor to the Kansas City metro area, and their presence in older buildings – like College Hill Elementary, Curtis Middle School, and Truesdell Middle School (Wichita USD 259) – highlights the challenges of bat exclusion. Remediation efforts, including inspections, monitoring, sealing, and multi-year warranties, can be incredibly costly.  These tiny creatures often find their way into buildings through surprisingly small openings – roof vents, chimneys, and other roofline access points.  
+Bats show up more often than many Kansas City homeowners expect—especially in older buildings with small gaps at roof lines, vents, and chimneys. Recent reporting on Wichita USD 259 found bats at College Hill Elementary, Curtis Middle School, and Truesdell Middle School, with remediation planned around inspection, monitoring, sealing, and multi-year warranty work ([Kansas.com](https://www.kansas.com/news/local/education/article316828655.html)). That story is a useful Midwest reminder: bats are common in older structures, not just schools, and professional exclusion is rarely a one-visit spray job.
 
-**The Problem:** Bats are common in older Midwest buildings (homes and schools); tiny entry points at roof lines/vents; high/hard access; humane one-way exclusion then sealing; contamination/histoplasmosis awareness from guano.
+## Why bat jobs get complicated
 
-**Our Approach:** At KC Pest Experts, we specialize in humane bat exclusion, prioritizing a thorough assessment and tailored solution. We use one-way exclusion devices combined with strategic sealing to prevent future entry while minimizing disruption.  We also address the critical issue of guano cleanup and potential histoplasmosis contamination.
+Entry openings can be tiny, access is often high, and colonies may return to the same roost after incomplete work. Humane exclusion typically uses one-way devices so bats can leave, then sealing so they cannot re-enter. Guano cleanup planning matters too when droppings create contamination concerns in enclosed spaces.
 
-**Need bat exclusion services?** Contact us today for a free consultation: [Link to Contact Page]
+## What we cover for KC metro properties
 
-**Resources:**
-*   [https://www.kansas.com/news/local/education/article316828655.html](https://www.kansas.com/news/local/education/article316828655.html) – Wichita School Bat Issue
-*   [https://www.nps.gov/subjects/bats/index.htm](https://www.nps.gov/subjects/bats/index.htm) – Bat Facts from the National Park Service
-*   [https://www.usgs.gov/faqs/are-bats-dangerous](https://www.usgs.gov/faqs/are-bats-dangerous) – Bat Safety from the USGS
+KC Pest Experts helps homeowners and property managers with bat-related wildlife planning through [Wildlife Control Services](/pest-and-wildlife-services/wildlife-control-services), and with contamination follow-through via [Attic Disinfectant & Insulation Cleanup](/pest-and-wildlife-services/attic-disinfectant-insulation-cleanup) when attic conditions require it. We do not claim involvement in the Wichita school contract; that example simply shows how common and costly these projects can become across Kansas.
 
-**Related Services:**
-*   [https://www.kcpextra.com/pest-and-wildlife-services/wildlife-control-services](https://www.kcpextra.com/pest-and-wildlife-services/wildlife-control-services) – Wildlife Control Services
-*   [https://www.kcpextra.com/pest-and-wildlife-services/attic-disinfectant-insulation-cleanup](https://www.kcpextra.com/pest-and-wildlife-services/attic-disinfectant-insulation-cleanup) – Attic Disinfectant & Insulation Cleanup
+If you are seeing bats or suspect roost activity, [request service](/pest-control-service#request-form) and describe what you are observing.
+
+## Coming up this week
+
+- **Coming soon:** Finding Tiny Bat Entry Points — common openings at vents, chimneys, and overlooked roof-line gaps
+- **Coming soon:** Access & Safety Challenges on Tall Roofs — why height and reach change the job plan
+- **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup — humane exit devices, sealing, and guano follow-through
+
+## Sources
+
+- [Wichita school bat remediation reporting (Kansas.com)](https://www.kansas.com/news/local/education/article316828655.html)
+- [National Park Service: bats](https://www.nps.gov/subjects/bats/index.htm)
+- [USGS: are bats dangerous?](https://www.usgs.gov/faqs/are-bats-dangerous)
 
 <!-- kcpest-series:begin -->
 ## Articles in this series
 
-_News-tied Kansas City / Midwest series on bat exclusion complexity for homeowners and property managers.
-
-Must cite this news story as an external https link: h_
+_Bat Exclusion Complexity in the Midwest_
 
 - [Bat Exclusion in the KC Metro: Schools & Your Home](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)
+- **Coming soon:** Finding Tiny Bat Entry Points
+- **Coming soon:** Access & Safety Challenges on Tall Roofs
+- **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup
 
 <!-- kcpest-series:end -->
-
