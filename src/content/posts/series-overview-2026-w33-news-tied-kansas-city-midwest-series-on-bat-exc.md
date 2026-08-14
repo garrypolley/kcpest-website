@@ -36,11 +36,11 @@ If you are seeing bats or suspect roost activity, [request service](/pest-contro
 <!-- kcpest-series:begin -->
 ## Articles in this series
 
-_Bat Exclusion Complexity in the Midwest_
+_News-tied Kansas City / Midwest series on bat exclusion complexity for homeowners and property managers.
+
+Must cite this news story as an external https link: h_
 
 - [Bat Exclusion in the KC Metro: Schools & Your Home](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)
-- **Coming soon:** Finding Tiny Bat Entry Points
-- **Coming soon:** Access & Safety Challenges on Tall Roofs
-- **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup
+- [Tiny Entry Points: Where Bats Find Their Way](/pest-control-blog/tiny-entry-points-where-bats-find-their-way)
 
 <!-- kcpest-series:end -->
