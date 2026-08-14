@@ -42,5 +42,6 @@ Must cite this news story as an external https link: h_
 
 - [Bat Exclusion in the KC Metro: Schools & Your Home](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)
 - [Tiny Entry Points: Where Bats Find Their Way](/pest-control-blog/tiny-entry-points-where-bats-find-their-way)
+- [Reaching for Bats: Roof Access & Safety in KC](/pest-control-blog/reaching-for-bats-roof-access-safety-in-kc)
 
 <!-- kcpest-series:end -->
