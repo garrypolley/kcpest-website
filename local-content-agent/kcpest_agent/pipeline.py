@@ -20,7 +20,13 @@ from kcpest_agent.generate import (
     generate_article_json,
     generate_hub_week_json,
 )
-from kcpest_agent.hub_links import render_series_block, upsert_hub_series_section
+from kcpest_agent.hub_links import (
+    display_series_title,
+    render_series_block,
+    replace_part_series_footer,
+    upsert_hub_coming_up_section,
+    upsert_hub_series_section,
+)
 from kcpest_agent.internal_links import sanitize_fabricated_kcpext_urls
 from kcpest_agent.quality import (
     combined_score,
@@ -63,7 +69,7 @@ def append_series_footer(
     hub_slug: str,
     series_title: str,
     current_slug: str,
-    siblings: list[tuple[str, str, str]],  # title, slug, published_on (YYYY-MM-DD)
+    siblings: list[tuple[str, str | None, str | None]],  # title, slug?, published_on?
 ) -> str:
     block = render_series_block(
         hub_slug,
@@ -72,6 +78,94 @@ def append_series_footer(
         current_slug=current_slug,
     )
     return body.rstrip() + "\n\n---\n\n" + block + "\n"
+
+
+def series_nav_entries(
+    series: WeeklySeriesState,
+    *,
+    extra: tuple[str, str, str] | None = None,
+    extra_part: int | None = None,
+) -> list[tuple[str, str | None, str | None]]:
+    """Hub + parts 1–3 as live links or Coming soon (includes in-flight ``extra``)."""
+    entries: list[tuple[str, str | None, str | None]] = []
+    hub = next((p for p in series.posts if p.part == 0), None)
+    if hub:
+        entries.append((hub.title, hub.slug, hub.published_on))
+    by_part = {p.part: p for p in series.posts if p.part > 0}
+    for part in (1, 2, 3):
+        if extra is not None and extra_part == part:
+            entries.append(extra)
+            continue
+        if part in by_part:
+            p = by_part[part]
+            entries.append((p.title, p.slug, p.published_on))
+            continue
+        plan = next((pl for pl in series.planned if pl.part == part), None)
+        if plan:
+            entries.append((plan.title, None, None))
+    return entries
+
+
+def coming_up_entries(
+    series: WeeklySeriesState,
+    *,
+    extra: tuple[str, str, str] | None = None,
+    extra_part: int | None = None,
+) -> list[tuple[str, str | None, str | None, str]]:
+    """Part teasers for hub ## Coming up this week (no hub row)."""
+    rows: list[tuple[str, str | None, str | None, str]] = []
+    by_part = {p.part: p for p in series.posts if p.part > 0}
+    for part in (1, 2, 3):
+        plan = next((pl for pl in series.planned if pl.part == part), None)
+        teaser = " ".join((plan.focus if plan else "").split())[:120]
+        if extra is not None and extra_part == part:
+            title, slug, published_on = extra
+            rows.append((title, slug, published_on, teaser))
+        elif part in by_part:
+            p = by_part[part]
+            rows.append((p.title, p.slug, p.published_on, teaser))
+        elif plan:
+            rows.append((plan.title, None, None, teaser))
+    return rows
+
+
+def sync_series_navigation(
+    posts_dir: Path,
+    series: WeeklySeriesState,
+    *,
+    series_title: str,
+    extra: tuple[str, str, str] | None = None,
+    extra_part: int | None = None,
+) -> list[Path]:
+    """Rewrite hub index + Coming up + every published part footer. Returns touched paths."""
+    if not series.hub_slug:
+        return []
+    hub_path = posts_dir / f"{series.hub_slug}.md"
+    if not hub_path.is_file():
+        return []
+    entries = series_nav_entries(series, extra=extra, extra_part=extra_part)
+    upsert_hub_series_section(hub_path, series_title=series_title, entries=entries)
+    upsert_hub_coming_up_section(
+        hub_path,
+        upcoming=coming_up_entries(series, extra=extra, extra_part=extra_part),
+    )
+    touched = [hub_path]
+    part_slugs = [p.slug for p in series.posts if p.part > 0]
+    if extra:
+        part_slugs.append(extra[1])
+    for slug in part_slugs:
+        path = posts_dir / f"{slug}.md"
+        if not path.is_file() or path in touched:
+            continue
+        footer = render_series_block(
+            series.hub_slug,
+            series_title,
+            siblings=entries,
+            current_slug=slug,
+        )
+        replace_part_series_footer(path, footer)
+        touched.append(path)
+    return touched
 
 
 def publish_git(
@@ -181,7 +275,7 @@ def start_week(
 
     topic_id = iso_week_topic_id_on_date(user_prompt, anchor_d, tz)
     hub_slug = unique_slug(f"series-overview-{topic_id}", posts_dir)
-    series_title = user_prompt.strip()[:160]
+    series_title = display_series_title(user_prompt)
 
     ollama = cfg.get("ollama", {})
     base_url = ollama.get("base_url", "http://127.0.0.1:11434")
@@ -406,7 +500,8 @@ def _try_publish_subpost(
         th_use = overlap_thr
 
     hub_slug = series.hub_slug
-    series_title = series.user_prompt.strip()[:160]
+    hub_path = posts_dir / f"{hub_slug}.md"
+    series_title = display_series_title(series.user_prompt, hub_path if hub_path.is_file() else None)
     user_prompt = series.user_prompt
 
     prior_slugs = [p.slug for p in sorted(series.posts, key=lambda x: (x.part, x.published_on))]
@@ -464,12 +559,11 @@ def _try_publish_subpost(
         if not hub_p:
             feedback = "Internal state error: hub missing"
             continue
-        sibs: list[tuple[str, str, str]] = [
-            (hub_p.title, hub_p.slug, hub_p.published_on),
-        ]
-        for p in sorted([x for x in series.posts if x.part > 0], key=lambda x: x.published_on):
-            sibs.append((p.title, p.slug, p.published_on))
-        sibs.append((title, slug, pub_date))
+        sibs = series_nav_entries(
+            series,
+            extra=(title, slug, pub_date),
+            extra_part=part_num,
+        )
         body_final = append_series_footer(
             body,
             hub_slug=hub_p.slug,
@@ -531,22 +625,16 @@ def _try_publish_subpost(
 
         if passes_threshold(overall, min_q) and h_score >= 82:
             hub_path = posts_dir / f"{hub_slug}.md"
-            if hub_path.is_file():
-                hub_row = next(p for p in series.posts if p.part == 0)
-                rows: list[tuple[str, str, str]] = [
-                    (hub_row.title, hub_row.slug, hub_row.published_on),
-                ]
-                for p in sorted([x for x in series.posts if x.part > 0], key=lambda x: x.published_on):
-                    rows.append((p.title, p.slug, p.published_on))
-                rows.append((title, slug, pub_date))
-                upsert_hub_series_section(
-                    hub_path,
-                    series_title=series_title,
-                    entries=rows,
-                )
+            touched = sync_series_navigation(
+                posts_dir,
+                series,
+                series_title=series_title,
+                extra=(title, slug, pub_date),
+                extra_part=part_num,
+            )
 
             pub = cfg.get("publish", {})
-            to_add = [out_path, hub_path]
+            to_add = list({*touched, out_path})
 
             if pub.get("enabled") and pub.get("git_commit", True):
                 try:

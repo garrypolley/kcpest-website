@@ -23,8 +23,8 @@ If you are seeing bats or suspect roost activity, [request service](/pest-contro
 
 ## Coming up this week
 
-- **Coming soon:** Finding Tiny Bat Entry Points — common openings at vents, chimneys, and overlooked roof-line gaps
-- **Coming soon:** Access & Safety Challenges on Tall Roofs — why height and reach change the job plan
+- [Tiny Entry Points: Where Bats Find Their Way](/pest-control-blog/tiny-entry-points-where-bats-find-their-way) — common openings at vents, chimneys, and overlooked roof-line gaps
+- [Reaching for Bats: Roof Access & Safety in KC](/pest-control-blog/reaching-for-bats-roof-access-safety-in-kc) — why height and reach change the job plan
 - **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup — humane exit devices, sealing, and guano follow-through
 
 ## Sources
@@ -36,12 +36,11 @@ If you are seeing bats or suspect roost activity, [request service](/pest-contro
 <!-- kcpest-series:begin -->
 ## Articles in this series
 
-_News-tied Kansas City / Midwest series on bat exclusion complexity for homeowners and property managers.
-
-Must cite this news story as an external https link: h_
+_Bat Exclusion Complexity in the Midwest_
 
 - [Bat Exclusion in the KC Metro: Schools & Your Home](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)
 - [Tiny Entry Points: Where Bats Find Their Way](/pest-control-blog/tiny-entry-points-where-bats-find-their-way)
 - [Reaching for Bats: Roof Access & Safety in KC](/pest-control-blog/reaching-for-bats-roof-access-safety-in-kc)
+- **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup
 
 <!-- kcpest-series:end -->
