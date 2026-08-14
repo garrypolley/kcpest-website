@@ -1,12 +1,12 @@
 ---
 title: "Tiny Entry Points: Where Bats Find Their Way"
-description: "Bats often sneak into buildings through surprisingly small openings \u2013 roof vents, chimneys, and gaps around flashing. Identifying these hidden entrances is the first step to humane exclusion and preventing future bat problems in your Kansas City home or building. [series overview](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)"
+description: "Bats often sneak into buildings through surprisingly small openings – roof vents, chimneys, and gaps around flashing. Identifying these hidden entrances is the first step to humane exclusion in Kansas City."
 pubDate: 2026-08-11
 author: "KC Pest Experts"
 seriesTopicId: "2026-W33-news-tied-kansas-city-midwest-series-on-bat-excl"
 seriesHubSlug: "series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc"
 seriesPart: 1
-seriesTitle: "News-tied Kansas City / Midwest series on bat exclusion complexity for homeowners and property managers.\n\nMust cite this news story as an external https link: h"
+seriesTitle: "Bat Exclusion Complexity in the Midwest"
 ---
 # Tiny Entry Points: Where Bats Find Their Way
 
@@ -32,13 +32,15 @@ For more information about bat behavior and conservation, visit the National Par
 
 ---
 
+<!-- kcpest-series-footer:begin -->
 ## This week’s series
 
-This piece is part of our series **News-tied Kansas City / Midwest series on bat exclusion complexity for homeowners and property managers.
-
-Must cite this news story as an external https link: h**. Start with the [series overview](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc).
+This piece is part of our series **Bat Exclusion Complexity in the Midwest**. Start with the [series overview](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc).
 
 **Articles in this series:**
 
 - [Bat Exclusion in the KC Metro: Schools & Your Home](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)
 - Tiny Entry Points: Where Bats Find Their Way *(this article)*
+- [Reaching for Bats: Roof Access & Safety in KC](/pest-control-blog/reaching-for-bats-roof-access-safety-in-kc)
+- **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup
+<!-- kcpest-series-footer:end -->

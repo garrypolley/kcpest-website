@@ -47,7 +47,7 @@ _News tie-in: AP Story https://apnews.com/article/hantavirus-cruise-ship-st-hele
 - [Protect Your Home: Air Quality & Pest Risk](/pest-control-blog/series-overview-2026-w19-news-tie-in-ap-story-https-apnews-com-article-h)
 - [Hidden Hazards: Rodents & Your Kansas City Air](/pest-control-blog/hidden-hazards-rodents-your-kansas-city-air)
 - [Breathing Easier: Attic & Crawlspace Remediation – A KC Homeowner’s Guide](/pest-control-blog/breathing-easier-attic-crawlspace-remediation-a-kc-homeowners-guide)
-- **Coming soon:** Hantavirus: Symptoms & Prevention – Protect Your Kansas City Home
+- [Hantavirus: Symptoms & Prevention – Protect Your Kansas City Home](/pest-control-blog/hantavirus-symptoms-prevention-protect-your-kansas-city-home)
 
 <!-- kcpest-series:end -->
 

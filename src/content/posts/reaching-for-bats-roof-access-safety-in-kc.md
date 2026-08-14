@@ -1,12 +1,12 @@
 ---
 title: "Reaching for Bats: Roof Access & Safety in KC"
-description: "Working with bats on your roof presents unique challenges. We\u2019ll cover access considerations, safety protocols, and the right equipment for humane bat exclusion \u2013 essential for homeowners and property managers in the Kansas City metro. [series overview](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)"
+description: "Working with bats on your roof presents unique challenges. Access considerations, safety protocols, and the right equipment for humane bat exclusion in the Kansas City metro."
 pubDate: 2026-08-13
 author: "KC Pest Experts"
 seriesTopicId: "2026-W33-news-tied-kansas-city-midwest-series-on-bat-excl"
 seriesHubSlug: "series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc"
 seriesPart: 2
-seriesTitle: "News-tied Kansas City / Midwest series on bat exclusion complexity for homeowners and property managers.\n\nMust cite this news story as an external https link: h"
+seriesTitle: "Bat Exclusion Complexity in the Midwest"
 ---
 ## Reaching for Bats: Roof Access & Safety in KC
 
@@ -36,18 +36,19 @@ Beyond the physical challenges, bat roosts can present additional hazards:
 
 ### Next Steps
 
-If you suspect bat activity on your roof, it's crucial to engage a qualified wildlife control professional. KC Pest Experts ([/pest-and-wildlife-services/wildlife-control-services](https://www.kcpestexperts.com/pest-and-wildlife-services/wildlife-control-services)) has the experience and equipment to safely and effectively exclude bats from your property. We can also assist with post-exclusion cleanup and sealing to prevent re-entry. Don’t take chances – contact us today for a consultation. [request service](/pest-control-service#request-form)
+If you suspect bat activity on your roof, it's crucial to engage a qualified wildlife control professional. KC Pest Experts ([Wildlife Control Services](/pest-and-wildlife-services/wildlife-control-services)) has the experience and equipment to safely and effectively exclude bats from your property. We can also assist with post-exclusion cleanup and sealing to prevent re-entry. Don’t take chances – contact us today for a consultation. [request service](/pest-control-service#request-form)
 
 ---
 
+<!-- kcpest-series-footer:begin -->
 ## This week’s series
 
-This piece is part of our series **News-tied Kansas City / Midwest series on bat exclusion complexity for homeowners and property managers.
-
-Must cite this news story as an external https link: h**. Start with the [series overview](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc).
+This piece is part of our series **Bat Exclusion Complexity in the Midwest**. Start with the [series overview](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc).
 
 **Articles in this series:**
 
 - [Bat Exclusion in the KC Metro: Schools & Your Home](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)
 - [Tiny Entry Points: Where Bats Find Their Way](/pest-control-blog/tiny-entry-points-where-bats-find-their-way)
 - Reaching for Bats: Roof Access & Safety in KC *(this article)*
+- **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup
+<!-- kcpest-series-footer:end -->
