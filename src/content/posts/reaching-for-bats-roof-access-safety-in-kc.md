@@ -50,5 +50,6 @@ This piece is part of our series **Bat Exclusion Complexity in the Midwest**. St
 - [Bat Exclusion in the KC Metro: Schools & Your Home](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)
 - [Tiny Entry Points: Where Bats Find Their Way](/pest-control-blog/tiny-entry-points-where-bats-find-their-way)
 - Reaching for Bats: Roof Access & Safety in KC *(this article)*
-- **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup
+- [Humane Exclusion & Post-Exclusion Cleanup: Bat Removal Strategies](/pest-control-blog/humane-exclusion-post-exclusion-cleanup-bat-removal-strategies)
+
 <!-- kcpest-series-footer:end -->

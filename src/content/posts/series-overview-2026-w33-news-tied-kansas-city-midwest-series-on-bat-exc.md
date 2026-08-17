@@ -23,9 +23,10 @@ If you are seeing bats or suspect roost activity, [request service](/pest-contro
 
 ## Coming up this week
 
-- [Tiny Entry Points: Where Bats Find Their Way](/pest-control-blog/tiny-entry-points-where-bats-find-their-way) — common openings at vents, chimneys, and overlooked roof-line gaps
-- [Reaching for Bats: Roof Access & Safety in KC](/pest-control-blog/reaching-for-bats-roof-access-safety-in-kc) — why height and reach change the job plan
-- **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup — humane exit devices, sealing, and guano follow-through
+- [Tiny Entry Points: Where Bats Find Their Way](/pest-control-blog/tiny-entry-points-where-bats-find-their-way) — This article will detail the common entry points bats use – focusing on roof vents, chimneys, and other overlooked openi
+- [Reaching for Bats: Roof Access & Safety in KC](/pest-control-blog/reaching-for-bats-roof-access-safety-in-kc) — We'll discuss the unique safety considerations and access challenges involved in bat exclusion on residential and commer
+- [Humane Exclusion & Post-Exclusion Cleanup: Bat Removal Strategies](/pest-control-blog/humane-exclusion-post-exclusion-cleanup-bat-removal-strategies) — This post will cover the humane one-way exclusion process, sealing strategies, and the critical importance of guano remo
+
 
 ## Sources
 
@@ -41,6 +42,6 @@ _Bat Exclusion Complexity in the Midwest_
 - [Bat Exclusion in the KC Metro: Schools & Your Home](/pest-control-blog/series-overview-2026-w33-news-tied-kansas-city-midwest-series-on-bat-exc)
 - [Tiny Entry Points: Where Bats Find Their Way](/pest-control-blog/tiny-entry-points-where-bats-find-their-way)
 - [Reaching for Bats: Roof Access & Safety in KC](/pest-control-blog/reaching-for-bats-roof-access-safety-in-kc)
-- **Coming soon:** One-Way Exclusion & Post-Exclusion Cleanup
+- [Humane Exclusion & Post-Exclusion Cleanup: Bat Removal Strategies](/pest-control-blog/humane-exclusion-post-exclusion-cleanup-bat-removal-strategies)
 
 <!-- kcpest-series:end -->
